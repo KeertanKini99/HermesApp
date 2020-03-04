@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="go_c">
+        <item>@drawable/la</item>
+        <item>@drawable/lb</item>
+        <item>@drawable/lc</item>
+    </integer-array>
+    <integer-array name="go_f">
+        <item>@drawable/la</item>
+        <item>@drawable/ld</item>
+        <item>@drawable/le</item>
+        <item>@drawable/lf</item>
+    </integer-array>
+</resources>
