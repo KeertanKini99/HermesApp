@@ -7,10 +7,10 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="750px"
+        android:layout_height="750px"
         android:layout_centerInParent="true"
-        android:background="@mipmap/splashm"
+        android:background="@mipmap/applogo"
         android:minWidth="0dp"
         android:minHeight="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
