@@ -3,20 +3,30 @@ package echo.m.demoapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.text.style.BackgroundColorSpan;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import static android.view.View.GONE;
+import static android.widget.RelativeLayout.TRUE;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
     final String[] start = new String[2];
     Spinner src;
     Spinner dest;
-    Button b1;
+    Button b1,b2;
+    EditText c1,c2,c3,c4,c5,c6;
+    View lineAD,lineAB,lineBC,lineDE,lineEF;
     static int graph[][];
     static int via[][];
     static int rt[][];
@@ -45,9 +57,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //setContentView(new MyView(this));
         src = (Spinner) findViewById(R.id.spinner);
         dest = (Spinner) findViewById(R.id.spinner2);
         b1 = (Button) findViewById(R.id.button);
+        b2 = (Button) findViewById(R.id.button2);
+        c1=(EditText)findViewById(R.id.c1);
+        c2=(EditText)findViewById(R.id.c2);
+        c3=(EditText)findViewById(R.id.c3);
+        c4=(EditText)findViewById(R.id.c4);
+        c5=(EditText)findViewById(R.id.c5);
+        c6=(EditText)findViewById(R.id.c6);
+        lineAB=(View)findViewById(R.id.lineAB);
+        lineAD=(View)findViewById(R.id.lineAD);
+        lineBC=(View)findViewById(R.id.lineBC);
+        lineDE=(View)findViewById(R.id.lineDE);
+        lineEF=(View)findViewById(R.id.lineEF);
+
         graph = new int[v][v];
         via = new int[v][v];
         rt = new int[v][v];
@@ -72,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     via[i][j] = i;
                 }
                 else
+
                 {
                     rt[i][j] = 999;
                     via[i][j] = 100;
@@ -92,12 +119,108 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         final ArrayAdapter<String> a1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, sourceval);
         ArrayAdapter<String> a2 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, destinationval);
         src.setAdapter(a1);
         dest.setAdapter(a2);
         src.setOnItemSelectedListener(new sourceclass());
         dest.setOnItemSelectedListener(new destclass());
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                c1.setBackgroundColor(Color.YELLOW);
+                c2.setBackgroundColor(Color.YELLOW);
+                c3.setBackgroundColor(Color.YELLOW);
+                c4.setBackgroundColor(Color.YELLOW);
+                c5.setBackgroundColor(Color.YELLOW);
+                c6.setBackgroundColor(Color.YELLOW);
+                lineAB.setBackgroundColor(Color.RED);
+                lineBC.setBackgroundColor(Color.RED);
+                lineAD.setBackgroundColor(Color.RED);
+                lineDE.setBackgroundColor(Color.RED);
+                lineEF.setBackgroundColor(Color.RED);
+
+
+                p=0;
+                findpath(st,dt);
+                path=new int[p];
+                //Toast.makeText(getApplicationContext(), "pval:" + p, Toast.LENGTH_SHORT).show();
+                for(int i=0;i<p;i++) {
+                    path[i] = path2[i];
+                    //Toast.makeText(getApplicationContext(), "" + path[i], Toast.LENGTH_SHORT).show();
+                }
+
+                for(int i=0;i<p;i++)
+                { switch(path[i])
+                {
+                    case 0: c1.setBackgroundColor(Color.GREEN);
+
+                              /* if (path[i + 1] == 1)
+                                   lineAB.setBackgroundColor(Color.GREEN);
+                               if (path[i + 1] == 3)
+                                   lineAD.setBackgroundColor(Color.GREEN);*/
+
+
+
+                        break;
+                    case 1: c2.setBackgroundColor(Color.GREEN);
+
+                            /*if (path[i + 1] == 2)
+                                lineBC.setBackgroundColor(Color.GREEN);*/
+
+                        break;
+                    case 2: c3.setBackgroundColor(Color.GREEN);
+                        break;
+                    case 3: c4.setBackgroundColor(Color.GREEN);
+
+                           /*if (path[i + 1] == 4)
+                               lineDE.setBackgroundColor(Color.GREEN);*/
+
+                        break;
+                    case 4: c5.setBackgroundColor(Color.GREEN);
+
+                          /*if (path[i + 1] == 5)
+                              lineEF.setBackgroundColor(Color.GREEN);*/
+
+
+                        break;
+                    case 5: c6.setBackgroundColor(Color.GREEN);
+                        break;
+
+                }
+
+
+                }
+
+                for(int i=0;i<p;i++) {
+                    if (i + 1 < p) {
+                        if ((path[i] == 0 && path[i + 1] == 1) || (path[i] == 1 && path[i + 1] == 0))
+                            lineAB.setBackgroundColor(Color.GREEN);
+
+
+                        if ((path[i] == 1 && path[i + 1] == 2) || (path[i] == 2 && path[i + 1] == 1))
+                            lineBC.setBackgroundColor(Color.GREEN);
+
+                        if ((path[i] == 0 && path[i + 1] == 3) || (path[i] == 3 && path[i + 1] == 1))
+                            lineAD.setBackgroundColor(Color.GREEN);
+                        if ((path[i] == 3 && path[i + 1] == 4) || (path[i] == 4 && path[i + 1] == 3))
+                            lineDE.setBackgroundColor(Color.GREEN);
+                        if ((path[i] == 4 && path[i + 1] == 5) || (path[i] == 5 && path[i + 1] == 4))
+                            lineEF.setBackgroundColor(Color.GREEN);
+                    }
+                }
+
+
+
+
+
+
+
+
+            }
+        });
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,14 +234,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, Main3Activity.class));
                 }*/
                 //Toast.makeText(getApplicationContext(),""+path.length,Toast.LENGTH_SHORT).show();
-                p=0;
-                findpath(st,dt);
-                path=new int[p];
-                //Toast.makeText(getApplicationContext(), "pval:" + p, Toast.LENGTH_SHORT).show();
-                for(int i=0;i<p;i++) {
-                    path[i] = path2[i];
-                    //Toast.makeText(getApplicationContext(), "" + path[i], Toast.LENGTH_SHORT).show();
-                }
+
 
                 Intent i = new Intent(MainActivity.this, Main2Activity.class);
 
@@ -133,11 +249,36 @@ public class MainActivity extends AppCompatActivity {
 
 
                 startActivity(i);
+
             }
         });
 
 
     }
+    /*public class MyView extends View{
+        public MyView(Context context)
+        {super(context);
+
+        }
+        @Override
+        protected void onDraw(Canvas canvas)
+        {
+            super.onDraw(canvas);
+            int x=getWidth();
+            int y=getHeight();
+            int radius=50;
+            Paint paint=new Paint();
+            paint.setStyle(Paint.Style.FILL);
+            paint.setColor(Color.WHITE);
+            canvas.drawPaint(paint);
+            paint.setColor(Color.RED);
+            canvas.drawCircle(x/2,y/2,radius,paint);
+
+        }
+
+        }*/
+
+
     public void update_table(int source)
     {
         for(int i = 0; i < v; i++)
