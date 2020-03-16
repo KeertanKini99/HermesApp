@@ -127,8 +127,8 @@ public class MainActivity extends AppCompatActivity {
         path2=new int[20];
                      //A B C   D   E   F   G   H   I   J    K   L   M  N   O   P   Q  R  S   T    U
         val=new int[] {0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,
-                       1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                       999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,
+                /*B*/  1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*C*/  999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,
                        999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,
                        999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,
                       999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
@@ -284,6 +284,231 @@ public class MainActivity extends AppCompatActivity {
                 myDialog.show();
             }
         });
+        c7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupg);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popuph);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupi);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupj);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupk);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupl);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupm);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupn);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupo);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupp);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupq);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupr);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popups);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupt);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupu);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -341,7 +566,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 p=0;
-                Toast.makeText(getApplicationContext(), "pval:" + p, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "pval:" + p, Toast.LENGTH_SHORT).show();
                 findpath(st,dt);
                 path=new int[p];
                 //Toast.makeText(getApplicationContext(), "pval:" + p, Toast.LENGTH_SHORT).show();
@@ -447,7 +672,7 @@ public class MainActivity extends AppCompatActivity {
                             lineNP.setBackgroundColor(Color.GREEN);
                         if ((path[i] == 15 && path[i + 1] == 16) || (path[i] == 16 && path[i + 1] == 15))
                             linePQ.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 17 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 17))
+                       if ((path[i] == 17 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 17))
                             lineRS.setBackgroundColor(Color.GREEN);
                         if ((path[i] == 17 && path[i + 1] == 20) || (path[i] == 20 && path[i + 1] == 17))
                             lineRU.setBackgroundColor(Color.GREEN);
@@ -520,7 +745,7 @@ public class MainActivity extends AppCompatActivity {
     {
       path2[p]=i;
 
-        Toast.makeText(getApplicationContext(),"path:"+path[p],Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"path:"+path[p],Toast.LENGTH_SHORT).show();
         p++;
       if(i!=j)
       {
@@ -579,7 +804,7 @@ public class MainActivity extends AppCompatActivity {
                 st=19;
             else if(start[0]=="U")
                 st=20;
-            Toast.makeText(getApplicationContext(),"src:"+st,Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getApplicationContext(),"src:"+st,Toast.LENGTH_SHORT).show();
 
 
         }
@@ -638,7 +863,7 @@ public class MainActivity extends AppCompatActivity {
                 dt=19;
             else if(start[1]=="U")
                 dt=20;
-            Toast.makeText(getApplicationContext(),"dest:"+dt,Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"dest:"+dt,Toast.LENGTH_SHORT).show();
 
 
         }
