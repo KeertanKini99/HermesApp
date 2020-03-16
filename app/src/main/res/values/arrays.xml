@@ -7,6 +7,21 @@
         <item>@drawable/ld</item>
         <item>@drawable/le</item>
         <item>@drawable/lf</item>
+        <item>@drawable/lg</item>
+        <item>@drawable/lh</item>
+        <item>@drawable/li</item>
+        <item>@drawable/lj</item>
+        <item>@drawable/lk</item>
+        <item>@drawable/ll</item>
+        <item>@drawable/lm</item>
+        <item>@drawable/ln</item>
+        <item>@drawable/lo</item>
+        <item>@drawable/lp</item>
+        <item>@drawable/lq</item>
+        <item>@drawable/lr</item>
+        <item>@drawable/ls</item>
+        <item>@drawable/lt</item>
+        <item>@drawable/lu</item>
     </integer-array>
 
 </resources>

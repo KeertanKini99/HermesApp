@@ -8,96 +8,524 @@
     android:background="@drawable/bgg"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/c13"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="M"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
+
+    <Button
+        android:id="@+id/c14"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="N"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71" />
+
+    <Button
+        android:id="@+id/c15"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="O"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.782" />
+
+    <Button
+        android:id="@+id/c16"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="P"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
+
+    <Button
+        android:id="@+id/c17"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Q"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71" />
+
+    <Button
+        android:id="@+id/c12"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="L"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566" />
+
+    <Button
+        android:id="@+id/c11"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="K"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <Button
+        android:id="@+id/c9"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="I"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/c10"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="J"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422" />
+
+    <View
+        android:id="@+id/lineFG"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/c7"
+        app:layout_constraintRight_toLeftOf="@id/c6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <View
+        android:id="@+id/lineER"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/c18"
+        app:layout_constraintRight_toLeftOf="@id/c5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429" />
+
+    <View
+        android:id="@+id/lineCL"
+        android:layout_width="146dp"
+        android:layout_height="5dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintLeft_toRightOf="@id/c3"
+        app:layout_constraintRight_toLeftOf="@id/c12"
+        app:layout_constraintStart_toEndOf="@+id/c3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561" />
+
+    <View
+        android:id="@+id/lineDU"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toRightOf="@id/c4"
+        app:layout_constraintRight_toLeftOf="@id/c21"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
     <View
         android:id="@+id/lineBC"
         android:layout_width="4dp"
-        android:layout_height="35dp"
+        android:layout_height="20dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@id/c2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/c3" />
+        app:layout_constraintTop_toBottomOf="@id/c3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/lineCD"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/lineDE"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/lineRU"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c18"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/lineST"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c19"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/lineEF"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c6"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/lineIJ"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c9"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/lineJK"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/lineKL"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c11"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/lineLM"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c12"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/lineMN"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c13"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <View
+        android:id="@+id/lineNO"
+        android:layout_width="4dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/c15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c14"
+        app:layout_constraintVertical_bias="0.066" />
 
     <Button
         android:id="@+id/c2"
         android:layout_width="43dp"
         android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="B"
-        android:background="@drawable/rectanglebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintVertical_bias="0.639" />
 
     <Button
         android:id="@+id/c3"
         android:layout_width="43dp"
         android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="C"
-        android:background="@drawable/rectanglebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        app:layout_constraintVertical_bias="0.567" />
 
     <Button
         android:id="@+id/c4"
         android:layout_width="43dp"
         android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="D"
-        android:background="@drawable/rectanglebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.495" />
 
     <Button
         android:id="@+id/c5"
         android:layout_width="43dp"
         android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="E"
-        android:background="@drawable/rectanglebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.423" />
 
     <Button
         android:id="@+id/c6"
         android:layout_width="43dp"
         android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="F"
-        android:background="@drawable/rectanglebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.351" />
+
+
+    <Button
+        android:id="@+id/c7"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="G"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <Button
+        android:id="@+id/c18"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="R"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423" />
+
+    <Button
+        android:id="@+id/c20"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="T"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <Button
+        android:id="@+id/c8"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="H"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <Button
+        android:id="@+id/c19"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="S"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423" />
+
+    <Button
+        android:id="@+id/c21"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="U"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -105,12 +533,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,7 +550,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="96dp"
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,15 +559,15 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
         android:text="Go"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintVertical_bias="0.953" />
 
     <Button
         android:id="@+id/button2"
@@ -151,7 +579,7 @@
         app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintVertical_bias="0.953" />
 
     <TextView
         android:id="@+id/textView"
@@ -194,62 +622,133 @@
         android:text="A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <View
-        android:id="@+id/lineAD"
-        android:layout_width="36dp"
-        android:layout_height="7dp"
+        android:id="@+id/lineHI"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
         android:background="@color/colorAccent"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/c4"
-        app:layout_constraintHorizontal_bias="0.425"
+
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toRightOf="@id/c9"
+        app:layout_constraintRight_toLeftOf="@id/c8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <View
+        android:id="@+id/lineJS"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/c19"
+        app:layout_constraintRight_toLeftOf="@id/c10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429" />
+
+    <View
+        android:id="@+id/lineKT"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/c20"
+        app:layout_constraintRight_toLeftOf="@id/c11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <View
+        android:id="@+id/lineRS"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintLeft_toRightOf="@id/c18"
+        app:layout_constraintRight_toLeftOf="@id/c19"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429" />
+
+    <View
+        android:id="@+id/lineGH"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/c7"
+        app:layout_constraintRight_toLeftOf="@id/c8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <View
+        android:id="@+id/lineAQ"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/c1"
-        app:layout_constraintRight_toLeftOf="@id/c4"
+        app:layout_constraintRight_toLeftOf="@id/c17"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.705" />
 
     <View
-        android:id="@+id/lineDE"
-        android:layout_width="27dp"
+        android:id="@+id/linePQ"
+        android:layout_width="20dp"
         android:layout_height="4dp"
 
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintLeft_toRightOf="@id/c4"
-        app:layout_constraintRight_toLeftOf="@id/c5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/c17"
+        app:layout_constraintRight_toLeftOf="@id/c16"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+
+        app:layout_constraintVertical_bias="0.705" />
 
     <View
-        android:id="@+id/lineEF"
-        android:layout_width="25dp"
+        android:id="@+id/lineNP"
+        android:layout_width="20dp"
         android:layout_height="4dp"
 
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintLeft_toRightOf="@id/c5"
-        app:layout_constraintRight_toLeftOf="@id/c6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/c16"
+        app:layout_constraintRight_toLeftOf="@id/c14"
         app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.705" />
 
     <View
         android:id="@+id/lineAB"
         android:layout_width="4dp"
-        android:layout_height="35dp"
+        android:layout_height="20dp"
         android:background="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintBottom_toTopOf="@id/c1"
-        app:layout_constraintTop_toBottomOf="@id/c2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="378dp" />
+        app:layout_constraintTop_toBottomOf="@id/c2"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
