@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/applogo"
+        android:icon="@drawable/app_logo"
         android:label="Hermes App"
-        android:roundIcon="@mipmap/applogo"
+        android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Main2Activity"></activity>
