@@ -3,6 +3,7 @@ package echo.m.demoapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -23,6 +24,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.view.View.GONE;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner src;
     Spinner dest;
     Button b1,b2;
-    EditText c1,c2,c3,c4,c5,c6;
+    Button c1,c2,c3,c4,c5,c6;
     View lineAD,lineAB,lineBC,lineDE,lineEF;
     static int graph[][];
     static int via[][];
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
     int[] path;
 
     int st,dt,p=0;
+
+    Dialog myDialog;
+    TextView tclose;
+
 
 
 
@@ -62,17 +68,19 @@ public class MainActivity extends AppCompatActivity {
         dest = (Spinner) findViewById(R.id.spinner2);
         b1 = (Button) findViewById(R.id.button);
         b2 = (Button) findViewById(R.id.button2);
-        c1=(EditText)findViewById(R.id.c1);
-        c2=(EditText)findViewById(R.id.c2);
-        c3=(EditText)findViewById(R.id.c3);
-        c4=(EditText)findViewById(R.id.c4);
-        c5=(EditText)findViewById(R.id.c5);
-        c6=(EditText)findViewById(R.id.c6);
+        c1=(Button) findViewById(R.id.c1);
+        c2=(Button) findViewById(R.id.c2);
+        c3=(Button) findViewById(R.id.c3);
+        c4=(Button) findViewById(R.id.c4);
+        c5=(Button) findViewById(R.id.c5);
+        c6=(Button) findViewById(R.id.c6);
         lineAB=(View)findViewById(R.id.lineAB);
         lineAD=(View)findViewById(R.id.lineAD);
         lineBC=(View)findViewById(R.id.lineBC);
         lineDE=(View)findViewById(R.id.lineDE);
         lineEF=(View)findViewById(R.id.lineEF);
+
+        myDialog=new Dialog(this);
 
         graph = new int[v][v];
         via = new int[v][v];
@@ -126,6 +134,98 @@ public class MainActivity extends AppCompatActivity {
         dest.setAdapter(a2);
         src.setOnItemSelectedListener(new sourceclass());
         dest.setOnItemSelectedListener(new destclass());
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               myDialog.setContentView(R.layout.popupa);
+                 tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+
+                    }
+                });
+                myDialog.show();
+
+            }
+        });
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupb);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+
+                    }
+                });
+                myDialog.show();
+
+
+            }
+        });
+        c3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupc);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupd);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+        c5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupe);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+
+            }
+        });
+        c6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupf);
+                tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                myDialog.show();
+            }
+        });
+
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
