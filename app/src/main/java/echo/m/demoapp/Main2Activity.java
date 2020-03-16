@@ -18,6 +18,9 @@ public class Main2Activity extends AppCompatActivity {
     int go_c_count=0;
     int[] path22;
     int pval22,flag=0,flag22=0,flag23=0;
+    Resources res;
+    TypedArray next;
+    Drawable x;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +33,18 @@ public class Main2Activity extends AppCompatActivity {
         pval22=bundle.getInt("pval");
         //path22=new int[pval22];
         path22= bundle.getIntArray("path");
+         res = getResources();
+        next = res.obtainTypedArray(R.array.go_c);
+         x = next.getDrawable(path22[go_c_count]);
+        im2.setImageDrawable(x);
+        go_c_count++;
 
 
         next2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Resources res = getResources();
-                TypedArray next = res.obtainTypedArray(R.array.go_c);
+                res = getResources();
+                 next = res.obtainTypedArray(R.array.go_c);
 
                 flag=0;
                 flag22=1;

@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
         lineST=(View)findViewById(R.id.lineST);
 
         myDialog=new Dialog(this);
+
+
 
         graph = new int[v][v];
         via = new int[v][v];
