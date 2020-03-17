@@ -23,5 +23,33 @@
         <item>@drawable/lt</item>
         <item>@drawable/lu</item>
     </integer-array>
+    <integer-array name="go_l">
+        <item>@drawable/l1</item>
+        <item>@drawable/l2</item>
+        <item>@drawable/l3</item>
+        <item>@drawable/l4</item>
+        <item>@drawable/l5</item>
+        <item>@drawable/l6</item>
+        <item>@drawable/l7</item>
+        <item>@drawable/l8</item>
+        <item>@drawable/l9</item>
+        <item>@drawable/l10</item>
+        <item>@drawable/l11</item>
+        <item>@drawable/l12</item>
+        <item>@drawable/l13</item>
+        <item>@drawable/l14</item>
+        <item>@drawable/l15</item>
+        <item>@drawable/l16</item>
+        <item>@drawable/l17</item>
+        <item>@drawable/l18</item>
+        <item>@drawable/l19</item>
+        <item>@drawable/l20</item>
+        <item>@drawable/l21</item>
+        <item>@drawable/l22</item>
+        <item>@drawable/l23</item>
+        <item>@drawable/l24</item>
+        <item>@drawable/l25</item>
+
+    </integer-array>
 
 </resources>

@@ -15,12 +15,14 @@ public class Main2Activity extends AppCompatActivity {
 
     Button next2, prev2;
     ImageView im2;
-    int go_c_count=0;
+    int go_c_count=0,go_c_count2=0;
     int[] path22;
-    int pval22,flag=0,flag22=0,flag23=0;
+    int[] pathl22;
+    int pval22,flag=0,flag22=0,flag23=0,flagl=0,flagr=0;
+    int length,length2;
     Resources res;
-    TypedArray next;
-    Drawable x;
+    TypedArray next,next22;
+    Drawable x,y;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,43 +35,86 @@ public class Main2Activity extends AppCompatActivity {
         pval22=bundle.getInt("pval");
         //path22=new int[pval22];
         path22= bundle.getIntArray("path");
+        pathl22=bundle.getIntArray("pathline");
          res = getResources();
         next = res.obtainTypedArray(R.array.go_c);
+        next22 = res.obtainTypedArray(R.array.go_l);
          x = next.getDrawable(path22[go_c_count]);
+
         im2.setImageDrawable(x);
         go_c_count++;
-
+        //g_fin++;
+        length = path22.length;
+        length2 = pathl22.length;
 
         next2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 res = getResources();
-                 next = res.obtainTypedArray(R.array.go_c);
+                next = res.obtainTypedArray(R.array.go_c);
+                next22 = res.obtainTypedArray(R.array.go_l);
 
-                flag=0;
-                flag22=1;
-                if(flag23==1) {
-                    flag23= 0;
-                    go_c_count++;
+                flag = 0;
+                flag22 = 1;
+                if (flag23 == 1) {
+                    flag23 = 0;
+                    //g_fin++:
+
+                   if(flagr==0 ){
+                        go_c_count++;
+                        }
+                     else {
+                        go_c_count2++;
+
+                    }
 
                 }
-                int length = path22.length;
 
-                if(go_c_count < length) {
-                    Drawable x = next.getDrawable(path22[go_c_count]);
-                    im2.setImageDrawable(x);
+
+
+                if(go_c_count2<length2 && flagl==0 && flagr==0 ){
+
+
+                y = next22.getDrawable(pathl22[go_c_count2]);
+                im2.setImageDrawable(y);
+                go_c_count2++;
+                    flagl=1;
+                    flagr=1;
+               // g_fin++;
+
+            }
+
+                else  if(go_c_count < length && flagl==1 && flagr==1 ) {
+
+                           x = next.getDrawable(path22[go_c_count]);
+                           im2.setImageDrawable(x);
+                           go_c_count++;
+                          // g_fin++;
+
+                       flagl=0;
+                       flagr=0;
+
+
+
+
 
                 }
-                else{
+                else {
                     //go_c_count=length;
                     Toast.makeText(getApplicationContext(), "Destination arrived!", Toast.LENGTH_SHORT).show();
                     flag=1;
 
                 }
-                if(flag==1)
+                if(flag==1) {
+                   // g_fin=path22.length+pathl22.length;
+                    go_c_count2=length2;
                     go_c_count=length;
-                else
-                   go_c_count++;
+                    //flagr=0;
+                }
+                else {
+                    //g_fin++;
+
+                }
                 next.recycle();
             }
         });
@@ -78,24 +123,77 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Resources res = getResources();
-                TypedArray next = res.obtainTypedArray(R.array.go_c);
+                TypedArray next = res.obtainTypedArray(
+                        R.array.go_c);
+                TypedArray next22 = res.obtainTypedArray(R.array.go_l);
 
                 //int length = next.length();
                 flag23=1;
                 if(flag22==1) {
                     flag22 = 0;
-                    go_c_count--;
+                    //g_fin--;
+                   if(flagr==0 && go_c_count!=length ) {
+
+                        go_c_count--;
+                    }
+                   else if(flagr==1 ){
+                        go_c_count2--;
+
+                    }
+                   if(go_c_count==length && go_c_count2==length2) {
+                       //go_c_count2--;
+                       go_c_count--;
+                   }
 
                 }
-                go_c_count--;
-                if(go_c_count > -1) {
-                    Drawable x = next.getDrawable(path22[go_c_count]);
+                //g_fin--;
+                //if(flagr==0) {
+
+
+                if(go_c_count2 >0 && flagr==0) {
+                    //if(go_c_count2==length2)
+                   // {
+                        go_c_count2--;
+                        y = next22.getDrawable(pathl22[go_c_count2]);
+                        im2.setImageDrawable(y);
+                        flagr=1;
+                        flagl=1;
+
+                   /* }else {
+                        go_c_count2--;
+                        y = next22.getDrawable(pathl22[go_c_count2]);
+                        im2.setImageDrawable(y);
+                        flagr = 1;
+                        flagl = 1;
+                        // go_c_count--;
+                    }*/
+
+
+
+
+
+                }
+                else if(go_c_count >0 && flagr==1)
+                {
+                    go_c_count--;
+
+
+                    //go_c_count2--;
+                    x = next.getDrawable(path22[go_c_count]);
                     im2.setImageDrawable(x);
+                    flagr=0;
+                    flagl=0;
+
+
 
 
                 }
                 else{
+                    //g_fin=0;
                     go_c_count=0;
+                    go_c_count2=0;
+                    //flagr=0;
+                    //flagl = 0;
                     Toast.makeText(getApplicationContext(), "Source arrived!", Toast.LENGTH_SHORT).show();
                 }
 

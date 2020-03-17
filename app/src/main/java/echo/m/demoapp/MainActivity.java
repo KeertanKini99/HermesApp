@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     int[] val;
     int[] path2;
     int[] path;
+    int[] pathl;
 
     int st,dt,p=0;
 
@@ -601,6 +602,7 @@ public class MainActivity extends AppCompatActivity {
                     path[i] = path2[i];
                     //Toast.makeText(getApplicationContext(), "" + path[i], Toast.LENGTH_SHORT).show();
                 }
+                pathl=new int[p-1];
 
                 for(int i=0;i<p;i++)
                 { switch(path[i])
@@ -655,56 +657,111 @@ public class MainActivity extends AppCompatActivity {
 
                 for(int i=0;i<p;i++) {
                     if (i + 1 < p) {
-                        if ((path[i] == 0 && path[i + 1] == 1) || (path[i] == 1 && path[i + 1] == 0))
+                        if ((path[i] == 0 && path[i + 1] == 1) || (path[i] == 1 && path[i + 1] == 0)) {
                             lineAB.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 0 && path[i + 1] == 16) || (path[i] == 16 && path[i + 1] == 0))
+                            pathl[i] = 0;
+                        }
+                        if ((path[i] == 0 && path[i + 1] == 16) || (path[i] == 16 && path[i + 1] == 0)) {
                             lineAQ.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 1 && path[i + 1] == 2) || (path[i] == 2 && path[i + 1] == 1))
+                            pathl[i]=1;
+                        }
+                        if ((path[i] == 1 && path[i + 1] == 2) || (path[i] == 2 && path[i + 1] == 1)) {
                             lineBC.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 2 && path[i + 1] == 3) || (path[i] == 3 && path[i + 1] == 2))
+                            pathl[i] = 2;
+                        }
+                        if ((path[i] == 2 && path[i + 1] == 3) || (path[i] == 3 && path[i + 1] == 2)) {
                             lineCD.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 2 && path[i + 1] == 11) || (path[i] == 11 && path[i + 1] == 2))
+                            pathl[i]=3;
+                        }
+                        if ((path[i] == 2 && path[i + 1] == 11) || (path[i] == 11 && path[i + 1] == 2)) {
                             lineCL.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 3 && path[i + 1] == 4) || (path[i] == 4 && path[i + 1] == 3))
+                            pathl[i]=4;
+                        }
+                        if ((path[i] == 3 && path[i + 1] == 4) || (path[i] == 4 && path[i + 1] == 3)) {
                             lineDE.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 3 && path[i + 1] == 20) || (path[i] == 20 && path[i + 1] == 3))
+                            pathl[i]=5;
+                        }
+                        if ((path[i] == 3 && path[i + 1] == 20) || (path[i] == 20 && path[i + 1] == 3)) {
                             lineDU.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 4 && path[i + 1] == 5) || (path[i] == 5 && path[i + 1] == 4))
+                            pathl[i]=6;
+
+                        }
+                        if ((path[i] == 4 && path[i + 1] == 5) || (path[i] == 5 && path[i + 1] == 4)) {
                             lineEF.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 4 && path[i + 1] == 17) || (path[i] == 17 && path[i + 1] == 4))
+                            pathl[i]=7;
+
+                        }
+                        if ((path[i] == 4 && path[i + 1] == 17) || (path[i] == 17 && path[i + 1] == 4)) {
                             lineER.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 5 && path[i + 1] == 6) || (path[i] == 6 && path[i + 1] == 5))
+                            pathl[i]=8;
+
+                        }
+                        if ((path[i] == 5 && path[i + 1] == 6) || (path[i] == 6 && path[i + 1] == 5)) {
                             lineFG.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 6 && path[i + 1] == 7) || (path[i] == 7 && path[i + 1] == 6))
+                            pathl[i]=9;
+
+                        }
+                        if ((path[i] == 6 && path[i + 1] == 7) || (path[i] == 7 && path[i + 1] == 6)) {
                             lineGH.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 7 && path[i + 1] == 8) || (path[i] == 8 && path[i + 1] == 7))
+                            pathl[i]=10;
+                        }
+                        if ((path[i] == 7 && path[i + 1] == 8) || (path[i] == 8 && path[i + 1] == 7)) {
                             lineHI.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 8 && path[i + 1] == 9) || (path[i] == 9 && path[i + 1] == 8))
+                            pathl[i]=11;
+
+                        }
+                        if ((path[i] == 8 && path[i + 1] == 9) || (path[i] == 9 && path[i + 1] == 8)) {
                             lineIJ.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 9 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 9))
+                            pathl[i] = 12;
+                        }
+                        if ((path[i] == 9 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 9)) {
                             lineJS.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 9 && path[i + 1] == 10) || (path[i] == 10 && path[i + 1] == 9))
+                            pathl[i] = 13;
+                        }
+                        if ((path[i] == 9 && path[i + 1] == 10) || (path[i] == 10 && path[i + 1] == 9)) {
                             lineJK.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 10 && path[i + 1] == 19) || (path[i] == 19 && path[i + 1] == 10))
+                            pathl[i] = 14;
+                        }
+                        if ((path[i] == 10 && path[i + 1] == 19) || (path[i] == 19 && path[i + 1] == 10)) {
                             lineKT.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 10 && path[i + 1] == 11) || (path[i] == 11 && path[i + 1] == 10))
+                            pathl[i] = 15;
+                        }
+                        if ((path[i] == 10 && path[i + 1] == 11) || (path[i] == 11 && path[i + 1] == 10)) {
                             lineKL.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 11 && path[i + 1] == 12) || (path[i] == 12 && path[i + 1] == 11))
+                            pathl[i] = 16;
+                        }
+                        if ((path[i] == 11 && path[i + 1] == 12) || (path[i] == 12 && path[i + 1] == 11)) {
                             lineLM.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 12 && path[i + 1] == 13) || (path[i] == 13 && path[i + 1] == 12))
+                            pathl[i] = 17;
+                        }
+                        if ((path[i] == 12 && path[i + 1] == 13) || (path[i] == 13 && path[i + 1] == 12)) {
                             lineMN.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 13 && path[i + 1] == 14) || (path[i] == 14 && path[i + 1] == 13))
+                            pathl[i] = 18;
+                        }
+                        if ((path[i] == 13 && path[i + 1] == 14) || (path[i] == 14 && path[i + 1] == 13)) {
                             lineNO.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 13 && path[i + 1] == 15) || (path[i] == 15 && path[i + 1] == 13))
+                            pathl[i] = 19;
+                        }
+                        if ((path[i] == 13 && path[i + 1] == 15) || (path[i] == 15 && path[i + 1] == 13)) {
                             lineNP.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 15 && path[i + 1] == 16) || (path[i] == 16 && path[i + 1] == 15))
+                            pathl[i] = 20;
+                        }
+                        if ((path[i] == 15 && path[i + 1] == 16) || (path[i] == 16 && path[i + 1] == 15)) {
                             linePQ.setBackgroundColor(Color.GREEN);
-                       if ((path[i] == 17 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 17))
-                            lineRS.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 17 && path[i + 1] == 20) || (path[i] == 20 && path[i + 1] == 17))
+                            pathl[i] = 21;
+                        }
+                       if ((path[i] == 17 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 17)) {
+                           lineRS.setBackgroundColor(Color.GREEN);
+                           pathl[i] = 22;
+                       }
+                        if ((path[i] == 17 && path[i + 1] == 20) || (path[i] == 20 && path[i + 1] == 17)) {
                             lineRU.setBackgroundColor(Color.GREEN);
-                        if ((path[i] == 18 && path[i + 1] == 19) || (path[i] == 19 && path[i + 1] == 18))
+                            pathl[i] = 23;
+                        }
+                        if ((path[i] == 18 && path[i + 1] == 19) || (path[i] == 19 && path[i + 1] == 18)) {
                             lineST.setBackgroundColor(Color.GREEN);
+                            pathl[i] = 24;
+                        }
                     }
                 }
 
@@ -731,6 +788,7 @@ public class MainActivity extends AppCompatActivity {
 
                 bundle.putIntArray("path",path);
                 bundle.putInt("pval",p);
+                bundle.putIntArray("pathline",pathl);
 
 
                 i.putExtras(bundle);
