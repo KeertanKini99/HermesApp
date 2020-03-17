@@ -129,28 +129,29 @@ public class MainActivity extends AppCompatActivity {
         via = new int[v][v];
         rt = new int[v][v];
         path2=new int[20];
-                     //A B C   D   E   F   G   H   I   J    K   L   M  N   O   P   Q  R  S   T    U
-        val=new int[] {0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,
-                /*B*/  1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                /*C*/  999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,
-                       999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,
-                       999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,
-                      999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                     999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                     999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,
-                     999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,
-                     999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,
-                     999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,
-                     999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,
-                     999,999,999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,
-                     999,999,999,999,999,999,999,999,999,999,999,999,1,0,1,1,999,999,999,999,999,
-                     999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,999,
-                     999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,0,1,999,999,999,999,
-                     1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,
-                     999,999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,0,1,999,1,
-                     999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,1,999,
-                     999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,999,
-                     999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,0};
+                       //A B C   D   E   F   G   H   I   J    K   L   M  N   O   P   Q  R  S   T    U
+        val=new int[] {
+                /*A*/ 0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,
+                /*B*/ 1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*C*/ 999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,
+                /*D*/ 999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,
+                /*E*/ 999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,
+                /*F*/ 999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*G*/ 999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*H*/ 999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*I*/ 999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,
+                /*J*/ 999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,
+                /*K*/ 999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,
+                /*L*/ 999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,
+                /*M*/ 999,999,999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,
+                /*N*/ 999,999,999,999,999,999,999,999,999,999,999,999,1,0,1,1,999,999,999,999,999,
+                /*O*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,999,
+                /*P*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,0,1,999,999,999,999,
+                /*Q*/ 1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,
+                /*R*/ 999,999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,0,1,999,1,
+                /*S*/ 999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,1,999,
+                /*T*/ 999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,999,
+                /*U*/ 999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,0};
         int d=0;
         for(int i = 0; i < v; i++)
             for(int j = 0; j < v; j++)
@@ -202,6 +203,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                myDialog.setContentView(R.layout.popupa);
+               myDialog.setCanceledOnTouchOutside(true);
+                /*
                  tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -210,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-                myDialog.show();
+*/                myDialog.show();
 
             }
         });
@@ -218,7 +221,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupb);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -226,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
 
 
             }
@@ -235,42 +239,45 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupc);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupd);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupe);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
 
             }
         });
@@ -278,224 +285,240 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupf);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupg);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popuph);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupi);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupj);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupk);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupl);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupm);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupn);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupo);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupp);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupq);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupr);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popups);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupt);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.setContentView(R.layout.popupu);
-                tclose=(TextView)myDialog.findViewById(R.id.close);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
                 tclose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         myDialog.dismiss();
                     }
                 });
-                myDialog.show();
+                */myDialog.show();
             }
         });
 
@@ -514,7 +537,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        b2.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {                  //Generate Button
             @Override
             public void onClick(View view) {
                 c1.setBackgroundColor(Color.YELLOW);
@@ -695,7 +718,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        b1.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {          //Go button
             @Override
             public void onClick(View v) {
 
