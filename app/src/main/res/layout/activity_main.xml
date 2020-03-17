@@ -410,6 +410,22 @@
         app:layout_constraintVertical_bias="0.473" />
 
     <Button
+        android:id="@+id/c22"
+        android:layout_width="47dp"
+        android:layout_height="42dp"
+        android:background="@drawable/rectanglebutton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="V"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <Button
         android:id="@+id/c19"
         android:layout_width="43dp"
         android:layout_height="30dp"
@@ -497,6 +513,34 @@
         app:layout_constraintRight_toLeftOf="@id/c5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.338" />
+
+    <View
+        android:id="@+id/lineVD"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/c22"
+        app:layout_constraintRight_toLeftOf="@id/c4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <View
+        android:id="@+id/lineVC"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/c22"
+        app:layout_constraintRight_toLeftOf="@id/c3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
 
     <View
         android:id="@+id/lineFG"

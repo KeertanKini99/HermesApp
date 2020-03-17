@@ -22,6 +22,7 @@
         <item>@drawable/ls</item>
         <item>@drawable/lt</item>
         <item>@drawable/lu</item>
+        <item>@drawable/lv</item>
     </integer-array>
     <integer-array name="go_l">
         <item>@drawable/l1</item>
@@ -49,6 +50,8 @@
         <item>@drawable/l23</item>
         <item>@drawable/l24</item>
         <item>@drawable/l25</item>
+        <item>@drawable/l26</item>
+        <item>@drawable/l27</item>
 
     </integer-array>
 

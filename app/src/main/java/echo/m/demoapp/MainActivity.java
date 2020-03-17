@@ -33,19 +33,19 @@ import static android.widget.RelativeLayout.TRUE;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] sourceval = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U"};
-    String[] destinationval = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U"};
+    String[] sourceval = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V"};
+    String[] destinationval = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V"};
     final String[] start = new String[2];
     Spinner src;
     Spinner dest;
     Button b1,b2;
-    Button c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21;
-    View lineAB,lineAQ,lineBC,lineCD,lineCL,lineDE,lineDU,lineEF,lineER,lineFG,lineGH,lineHI,lineIJ,lineJS,lineJK,lineKT,lineKL,lineLM,lineMN,lineNO,lineNP,linePQ,lineRS,lineRU,lineST;
+    Button c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22;
+    View lineAB,lineAQ,lineBC,lineCD,lineCL,lineDE,lineDU,lineEF,lineER,lineFG,lineGH,lineHI,lineIJ,lineJS,lineJK,lineKT,lineKL,lineLM,lineMN,lineNO,lineNP,linePQ,lineRS,lineRU,lineST,lineVD,lineVC;
     static int graph[][];
     static int via[][];
     static int rt[][];
-    static int v=21;
-    static int e=25;
+    static int v=22;
+    static int e=27;
     int[] val;
     int[] path2;
     int[] path;
@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         c19=(Button) findViewById(R.id.c19);
         c20=(Button) findViewById(R.id.c20);
         c21=(Button) findViewById(R.id.c21);
+        c22=(Button) findViewById(R.id.c22);
 
 
 
@@ -121,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
         lineRS=(View)findViewById(R.id.lineRS);
         lineRU=(View)findViewById(R.id.lineRU);
         lineST=(View)findViewById(R.id.lineST);
+        lineVD=(View)findViewById(R.id.lineVD);
+        lineVC=(View)findViewById(R.id.lineVC);
 
         myDialog=new Dialog(this);
 
@@ -132,27 +135,28 @@ public class MainActivity extends AppCompatActivity {
         path2=new int[20];
                        //A B C   D   E   F   G   H   I   J    K   L   M  N   O   P   Q  R  S   T    U
         val=new int[] {
-                /*A*/ 0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,
-                /*B*/ 1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                /*C*/ 999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,
-                /*D*/ 999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,
-                /*E*/ 999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,
-                /*F*/ 999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                /*G*/ 999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                /*H*/ 999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,
-                /*I*/ 999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,
-                /*J*/ 999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,
-                /*K*/ 999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,
-                /*L*/ 999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,
-                /*M*/ 999,999,999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,
-                /*N*/ 999,999,999,999,999,999,999,999,999,999,999,999,1,0,1,1,999,999,999,999,999,
-                /*O*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,999,
-                /*P*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,0,1,999,999,999,999,
-                /*Q*/ 1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,
-                /*R*/ 999,999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,0,1,999,1,
-                /*S*/ 999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,1,999,
-                /*T*/ 999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,999,
-                /*U*/ 999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,0};
+                /*A*/ 0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,
+                /*B*/ 1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*C*/ 999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,1,
+                /*D*/ 999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,1,
+                /*E*/ 999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,
+                /*F*/ 999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*G*/ 999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*H*/ 999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*I*/ 999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,
+                /*J*/ 999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,
+                /*K*/ 999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,
+                /*L*/ 999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,
+                /*M*/ 999,999,999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,
+                /*N*/ 999,999,999,999,999,999,999,999,999,999,999,999,1,0,1,1,999,999,999,999,999,999,
+                /*O*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,999,999,
+                /*P*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,0,1,999,999,999,999,999,
+                /*Q*/ 1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,
+                /*R*/ 999,999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,0,1,999,1,999,
+                /*S*/ 999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,
+                /*T*/ 999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,999,999,
+                /*U*/ 999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,0,999,
+                /*V*/ 999,999,1,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,0};
         int d=0;
         for(int i = 0; i < v; i++)
             for(int j = 0; j < v; j++)
@@ -522,6 +526,22 @@ public class MainActivity extends AppCompatActivity {
                 */myDialog.show();
             }
         });
+        c22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.setContentView(R.layout.popupv);
+                myDialog.setCanceledOnTouchOutside(true);
+                /*tclose=(TextView)myDialog.findViewById(R.id.close);
+                tclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        myDialog.dismiss();
+                    }
+                });
+                */myDialog.show();
+            }
+        });
+
 
 
 
@@ -562,6 +582,7 @@ public class MainActivity extends AppCompatActivity {
                 c19.setBackgroundColor(Color.YELLOW);
                 c20.setBackgroundColor(Color.YELLOW);
                 c21.setBackgroundColor(Color.YELLOW);
+                c22.setBackgroundColor(Color.YELLOW);
 
 
 
@@ -590,6 +611,8 @@ public class MainActivity extends AppCompatActivity {
                 lineRS.setBackgroundColor(Color.RED);
                 lineRU.setBackgroundColor(Color.RED);
                 lineST.setBackgroundColor(Color.RED);
+                lineVD.setBackgroundColor(Color.RED);
+                lineVC.setBackgroundColor(Color.RED);
 
 
 
@@ -648,6 +671,8 @@ public class MainActivity extends AppCompatActivity {
                     case 19: c20.setBackgroundColor(Color.GREEN);
                         break;
                     case 20: c21.setBackgroundColor(Color.GREEN);
+                        break;
+                    case 21: c22.setBackgroundColor(Color.GREEN);
                         break;
 
                 }
@@ -762,6 +787,15 @@ public class MainActivity extends AppCompatActivity {
                             lineST.setBackgroundColor(Color.GREEN);
                             pathl[i] = 24;
                         }
+                        if ((path[i] == 21 && path[i + 1] == 3) || (path[i] == 3 && path[i + 1] == 21)) {
+                            lineVD.setBackgroundColor(Color.GREEN);
+                            pathl[i] = 25;
+                        }
+                        if ((path[i] == 21 && path[i + 1] == 2) || (path[i] == 2 && path[i + 1] == 21)) {
+                            lineVC.setBackgroundColor(Color.GREEN);
+                            pathl[i] = 26;
+                        }
+
                     }
                 }
 
@@ -889,6 +923,8 @@ public class MainActivity extends AppCompatActivity {
                 st=19;
             else if(start[0]=="U")
                 st=20;
+            else if(start[0]=="V")
+                st=21;
            // Toast.makeText(getApplicationContext(),"src:"+st,Toast.LENGTH_SHORT).show();
 
 
@@ -948,6 +984,8 @@ public class MainActivity extends AppCompatActivity {
                 dt=19;
             else if(start[1]=="U")
                 dt=20;
+            else if(start[1]=="V")
+                dt=21;
             //Toast.makeText(getApplicationContext(),"dest:"+dt,Toast.LENGTH_SHORT).show();
 
 
