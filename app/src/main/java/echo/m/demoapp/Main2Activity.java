@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
         import android.graphics.drawable.Drawable;
         import android.os.Bundle;
         import android.view.View;
-        import android.widget.Button;
+import android.view.WindowManager;
+import android.widget.Button;
         import android.widget.ImageView;
         import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);  //App is now fullscreen
         setContentView(R.layout.activity_main2);
         next2 = (Button) findViewById(R.id.m2next);
         prev2 = (Button) findViewById(R.id.m2prev);

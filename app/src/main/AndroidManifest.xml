@@ -8,6 +8,7 @@
         android:label="Hermes App"
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
         <activity android:name=".Main2Activity"></activity>
         <activity android:name=".MainActivity"></activity>

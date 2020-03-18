@@ -1,10 +1,12 @@
 package echo.m.demoapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -18,6 +20,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.style.BackgroundColorSpan;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);  //App is now fullscreen
         setContentView(R.layout.activity_main);
         //setContentView(new MyView(this));
         src = (Spinner) findViewById(R.id.spinner);
@@ -544,21 +548,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         b2.setOnClickListener(new View.OnClickListener() {                  //Generate Button
             @Override
             public void onClick(View view) {
@@ -801,13 +790,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-
-
-
-
-
-
-
             }
         });
 
@@ -816,7 +798,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
              if(flag==0 && count==0) {
-                  Toast.makeText(getApplicationContext(), "PLEASE GENERATE A PATH!!", Toast.LENGTH_SHORT).show();
+                  //Toast.makeText(getApplicationContext(), "PLEASE GENERATE A PATH!!", Toast.LENGTH_SHORT).show();
+                 AlertDialog.Builder builder
+                         = new AlertDialog
+                         .Builder(MainActivity.this);
+                 builder.setMessage("No generated path recorded.");
+                 builder.setTitle("ALERT");
+
+                 builder.setCancelable(false);
+                 builder
+                         .setPositiveButton(
+                                 "Ok",
+                                 new DialogInterface
+                                         .OnClickListener() {
+
+                                     @Override
+                                     public void onClick(DialogInterface dialog,
+                                                         int which)
+                                     {
+                                         dialog.cancel();
+                                     }
+                                 });
+                 AlertDialog alertDialog = builder.create();
+                 alertDialog.show();
+                 
               }
               else { flag=0;
                       count++;
@@ -1002,5 +1007,50 @@ public class MainActivity extends AppCompatActivity {
         public void onNothingSelected(AdapterView<?> parent) {
 
         }
+    }
+
+
+    @Override
+    public void onBackPressed()
+    {
+        AlertDialog.Builder builder
+                = new AlertDialog
+                .Builder(MainActivity.this);
+
+        builder.setMessage("Do you want to exit ?");
+
+        builder.setTitle("Close App");
+
+        builder.setCancelable(false);
+        builder
+                .setPositiveButton(
+                        "Yes",
+                        new DialogInterface
+                                .OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+                                finish();
+                            }
+                        });
+
+        builder
+                .setNegativeButton(
+                        "No",
+                        new DialogInterface
+                                .OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which)
+                            {
+
+                                dialog.cancel();
+                            }
+                        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }
