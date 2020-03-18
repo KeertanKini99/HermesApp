@@ -33,8 +33,8 @@ import static android.widget.RelativeLayout.TRUE;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] sourceval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr.SHARADA.U.SHENOY)","CABIN (Dr.D.K.SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr.ARAVINDA.C.V)","CABIN (Dr.VENUGOPAL.P.S)","CABIN (Dr.ROSHAN FERNANDES)","CABIN (Mr.RADHAKRISHNA D)","WASHROOMS"};
-    String[] destinationval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr.SHARADA.U.SHENOY)","CABIN (Dr.D.K.SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr.ARAVINDA.C.V)","CABIN (Dr.VENUGOPAL.P.S)","CABIN (Dr.ROSHAN FERNANDES)","CABIN (Mr.RADHAKRISHNA D)","WASHROOMS"};
+    String[] sourceval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
+    String[] destinationval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
     final String[] start = new String[2];
     Spinner src;
     Spinner dest;
@@ -893,9 +893,9 @@ public class MainActivity extends AppCompatActivity {
                 st=4;
             else if(start[0]=="STAFF ROOM")
                 st=5;
-            else if(start[0]=="CABIN (Dr.SHARADA.U.SHENOY)")
+            else if(start[0]=="CABIN (Dr. SHARADA U. SHENOY)")
                 st=6;
-            else if(start[0]=="CABIN (Dr.D.K.SREEKANTHA)")
+            else if(start[0]=="CABIN (Dr. D.K. SREEKANTHA)")
                 st=7;
             else if(start[0]=="CSL07")
                 st=8;
@@ -915,13 +915,13 @@ public class MainActivity extends AppCompatActivity {
                 st=15;
             else if(start[0]=="PG LAB")
                 st=16;
-            else if(start[0]=="CABIN (Dr.ARAVINDA.C.V)")
+            else if(start[0]=="CABIN (Dr. ARAVINDA C.V.)")
                 st=17;
-            else if(start[0]=="CABIN (Dr.VENUGOPAL.P.S)")
+            else if(start[0]=="CABIN (Dr. VENUGOPAL P.S.)")
                 st=18;
-            else if(start[0]=="CABIN (Dr.ROSHAN FERNANDES)")
+            else if(start[0]=="CABIN (Dr. ROSHAN FERNANDES)")
                 st=19;
-            else if(start[0]=="CABIN (Mr.RADHAKRISHNA D)")
+            else if(start[0]=="CABIN (Mr. RADHAKRISHNA D.)")
                 st=20;
             else if(start[0]=="WASHROOMS")
                 st=21;
@@ -954,9 +954,9 @@ public class MainActivity extends AppCompatActivity {
                 dt=4;
             else if(start[1]=="STAFF ROOM")
                 dt=5;
-            else if(start[1]=="CABIN (Dr.SHARADA.U.SHENOY)")
+            else if(start[1]=="CABIN (Dr. SHARADA U. SHENOY)")
                 dt=6;
-            else if(start[1]=="CABIN (Dr.D.K.SREEKANTHA)")
+            else if(start[1]=="CABIN (Dr. D.K. SREEKANTHA)")
                 dt=7;
             else if(start[1]=="CSL07")
                 dt=8;
@@ -976,13 +976,13 @@ public class MainActivity extends AppCompatActivity {
                 dt=15;
             else if(start[1]=="PG LAB")
                 dt=16;
-            else if(start[1]=="CABIN (Dr.ARAVINDA.C.V)")
+            else if(start[1]=="CABIN (Dr. ARAVINDA C.V.)")
                 dt=17;
-            else if(start[1]=="CABIN (Dr.VENUGOPAL.P.S)")
+            else if(start[1]=="CABIN (Dr. VENUGOPAL P.S.)")
                 dt=18;
-            else if(start[1]=="CABIN (Dr.ROSHAN FERNANDES)")
+            else if(start[1]=="CABIN (Dr. ROSHAN FERNANDES)")
                 dt=19;
-            else if(start[1]=="CABIN (Mr.RADHAKRISHNA D)")
+            else if(start[1]=="CABIN (Mr. RADHAKRISHNA D.)")
                 dt=20;
             else if(start[1]=="WASHROOMS")
                 dt=21;
