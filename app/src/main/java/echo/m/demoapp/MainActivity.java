@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     int[] path2;
     int[] path;
     int[] pathl;
+    int flag=0,count=0;
 
     int st,dt,p=0;
 
@@ -561,6 +562,7 @@ public class MainActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {                  //Generate Button
             @Override
             public void onClick(View view) {
+                flag=1;
                 c1.setBackgroundColor(Color.YELLOW);
                 c2.setBackgroundColor(Color.YELLOW);
                 c3.setBackgroundColor(Color.YELLOW);
@@ -813,22 +815,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+             if(flag==0 && count==0) {
+                  Toast.makeText(getApplicationContext(), "PLEASE GENERATE A PATH!!", Toast.LENGTH_SHORT).show();
+              }
+              else { flag=0;
+                      count++;
+
+                  Intent i = new Intent(MainActivity.this, Main2Activity.class);
+
+                  Bundle bundle = new Bundle();
 
 
-                Intent i = new Intent(MainActivity.this, Main2Activity.class);
-
-                Bundle bundle = new Bundle();
-
-
-                bundle.putIntArray("path",path);
-                bundle.putInt("pval",p);
-                bundle.putIntArray("pathline",pathl);
+                  bundle.putIntArray("path", path);
+                  bundle.putInt("pval", p);
+                  bundle.putIntArray("pathline", pathl);
 
 
-                i.putExtras(bundle);
+                  i.putExtras(bundle);
 
 
-                startActivity(i);
+                  startActivity(i);
+              }
 
             }
         });
