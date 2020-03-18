@@ -4,13 +4,13 @@
     <string name="in_charge_mr_shrikanth_acharya">IN CHARGE: Mr. Shrikanth Acharya</string>
     <string name="csl04">CSL04</string>
     <string name="csl03">CSL03</string>
-    <string name="in_charge_ganesh_salian">IN CHARGE: Ganesh Salian</string>
+    <string name="in_charge_ganesh_salian">IN CHARGE: Mr. Ganesh Salian</string>
     <string name="hod_cabin">HOD CABIN</string>
     <string name="hod_dr_k_r_udaya_kumar_reddy">HOD: Dr. K. R. Udaya Kumar Reddy</string>
     <string name="qualification_ph_d">QUALIFICATION: Ph.D</string>
     <string name="designation_professor_amp_head"><![CDATA[DESIGNATION: Professor & Head]]></string>
     <string name="csl05">CSL05</string>
-    <string name="in_charge_vishwas_rao">IN CHARGE: Vishwas Rao</string>
+    <string name="in_charge_vishwas_rao">IN CHARGE: Mr. Vishwas Rao</string>
     <string name="csl06">CSL06</string>
     <string name="staff_room">STAFF ROOM</string>
     <string name="faculty">FACULTY</string>
@@ -23,7 +23,7 @@
     <string name="mr_sampath_kini_m_tech_asst_prof_gd_ii">Mr. Sampath Kini | M.Tech. | Asst. Prof Gd II</string>
     <string name="mrs_pallavi_k_n_m_tech_ph_d_asst_prof_gd_ii">Mrs. Pallavi K. N. | M.Tech., ( Ph.D) | Asst. Prof Gd II</string>
     <string name="professors_cabin">PROFESSORS\' CABIN</string>
-    <string name="name_mrs_sharada_udaya_shenoy">NAME: Mrs. Sharada Udaya Shenoy</string>
+    <string name="name_mrs_sharada_udaya_shenoy">NAME: Dr. Sharada Udaya Shenoy</string>
     <string name="qualification_m_tech_ph_d">QUALIFICATION: M.Tech., (Ph.D)</string>
     <string name="designation_assoc_prof">DESIGNATION: Assoc. Prof.</string>
     <string name="name_dr_d_k_sreekantha">NAME: Dr. D. K. Sreekantha</string>

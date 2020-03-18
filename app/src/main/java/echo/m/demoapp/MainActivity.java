@@ -33,8 +33,8 @@ import static android.widget.RelativeLayout.TRUE;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] sourceval = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V"};
-    String[] destinationval = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V"};
+    String[] sourceval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN(Dr.SHARADA.U.SHENOY)","CABIN(Dr.D.K.SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN(Dr.ARAVINDA.C.V)","CABIN(Dr.VENUGOPAL.P.S)","CABIN(Dr.ROSHAN FERNANDES)","CABIN(Mr.RADHAKRISHNA D)","WASHROOMS"};
+    String[] destinationval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN(Dr.SHARADA.U.SHENOY)","CABIN(Dr.D.K.SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN(Dr.ARAVINDA.C.V)","CABIN(Dr.VENUGOPAL.P.S)","CABIN(Dr.ROSHAN FERNANDES)","CABIN(Mr.RADHAKRISHNA D)","WASHROOMS"};
     final String[] start = new String[2];
     Spinner src;
     Spinner dest;
@@ -881,49 +881,49 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             start[0] = parent.getItemAtPosition(position).toString();
-            if(start[0]=="A")
+            if(start[0]=="CSL04")
                 st=0;
-            else if(start[0]=="B")
+            else if(start[0]=="CSL03")
                 st=1;
-            else if(start[0]=="C")
+            else if(start[0]=="HOD's CABIN")
                 st=2;
-            else if(start[0]=="D")
+            else if(start[0]=="CSL05")
                 st=3;
-            else if(start[0]=="E")
+            else if(start[0]=="CSL06")
                 st=4;
-            else if(start[0]=="F")
+            else if(start[0]=="STAFF ROOM")
                 st=5;
-            else if(start[0]=="G")
+            else if(start[0]=="CABIN(Dr.SHARADA.U.SHENOY)")
                 st=6;
-            else if(start[0]=="H")
+            else if(start[0]=="CABIN(Dr.D.K.SREEKANTHA)")
                 st=7;
-            else if(start[0]=="I")
+            else if(start[0]=="CSL07")
                 st=8;
-            else if(start[0]=="J")
+            else if(start[0]=="ISL01")
                 st=9;
-            else if(start[0]=="K")
+            else if(start[0]=="ISL02")
                 st=10;
-            else if(start[0]=="L")
+            else if(start[0]=="BALCONY")
                 st=11;
-            else if(start[0]=="M")
+            else if(start[0]=="ISL03")
                 st=12;
-            else if(start[0]=="N")
+            else if(start[0]=="CSL02")
                 st=13;
-            else if(start[0]=="O")
+            else if(start[0]=="CSL01")
                 st=14;
-            else if(start[0]=="P")
+            else if(start[0]=="STAIRS")
                 st=15;
-            else if(start[0]=="Q")
+            else if(start[0]=="PG LAB")
                 st=16;
-            else if(start[0]=="R")
+            else if(start[0]=="CABIN(Dr.ARAVINDA.C.V)")
                 st=17;
-            else if(start[0]=="S")
+            else if(start[0]=="CABIN(Dr.VENUGOPAL.P.S)")
                 st=18;
-            else if(start[0]=="T")
+            else if(start[0]=="CABIN(Dr.ROSHAN FERNANDES)")
                 st=19;
-            else if(start[0]=="U")
+            else if(start[0]=="CABIN(Mr.RADHAKRISHNA D)")
                 st=20;
-            else if(start[0]=="V")
+            else if(start[0]=="WASHROOMS")
                 st=21;
            // Toast.makeText(getApplicationContext(),"src:"+st,Toast.LENGTH_SHORT).show();
 
@@ -942,49 +942,49 @@ public class MainActivity extends AppCompatActivity {
             //start[1] = parent.getItemAtPosition(position).toString();
             start[1] = parent.getItemAtPosition(position).toString();
 
-            if(start[1]=="A")
+            if(start[1]=="CSL04")
                 dt=0;
-            else if(start[1]=="B")
+            else if(start[1]=="CSL03")
                 dt=1;
-            else if(start[1]=="C")
+            else if(start[1]=="HOD's CABIN")
                 dt=2;
-            else if(start[1]=="D")
+            else if(start[1]=="CSL05")
                 dt=3;
-            else if(start[1]=="E")
+            else if(start[1]=="CSL06")
                 dt=4;
-            else if(start[1]=="F")
+            else if(start[1]=="STAFF ROOM")
                 dt=5;
-            else if(start[1]=="G")
+            else if(start[1]=="CABIN(Dr.SHARADA.U.SHENOY)")
                 dt=6;
-            else if(start[1]=="H")
+            else if(start[1]=="CABIN(Dr.D.K.SREEKANTHA)")
                 dt=7;
-            else if(start[1]=="I")
+            else if(start[1]=="CSL07")
                 dt=8;
-            else if(start[1]=="J")
+            else if(start[1]=="ISL01")
                 dt=9;
-            else if(start[1]=="K")
+            else if(start[1]=="ISL02")
                 dt=10;
-            else if(start[1]=="L")
+            else if(start[1]=="BALCONY")
                 dt=11;
-            else if(start[1]=="M")
+            else if(start[1]=="ISL03")
                 dt=12;
-            else if(start[1]=="N")
+            else if(start[1]=="CSL02")
                 dt=13;
-            else if(start[1]=="O")
+            else if(start[1]=="CSL01")
                 dt=14;
-            else if(start[1]=="P")
+            else if(start[1]=="STAIRS")
                 dt=15;
-            else if(start[1]=="Q")
+            else if(start[1]=="PG LAB")
                 dt=16;
-            else if(start[1]=="R")
+            else if(start[1]=="CABIN(Dr.ARAVINDA.C.V)")
                 dt=17;
-            else if(start[1]=="S")
+            else if(start[1]=="CABIN(Dr.VENUGOPAL.P.S)")
                 dt=18;
-            else if(start[1]=="T")
+            else if(start[1]=="CABIN(Dr.ROSHAN FERNANDES)")
                 dt=19;
-            else if(start[1]=="U")
+            else if(start[1]=="CABIN(Mr.RADHAKRISHNA D)")
                 dt=20;
-            else if(start[1]=="V")
+            else if(start[1]=="WASHROOMS")
                 dt=21;
             //Toast.makeText(getApplicationContext(),"dest:"+dt,Toast.LENGTH_SHORT).show();
 
