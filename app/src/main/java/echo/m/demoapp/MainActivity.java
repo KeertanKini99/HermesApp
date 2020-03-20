@@ -552,28 +552,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 flag=1;
-                c1.setBackgroundColor(Color.YELLOW);
-                c2.setBackgroundColor(Color.YELLOW);
-                c3.setBackgroundColor(Color.YELLOW);
-                c4.setBackgroundColor(Color.YELLOW);
-                c5.setBackgroundColor(Color.YELLOW);
-                c6.setBackgroundColor(Color.YELLOW);
-                c7.setBackgroundColor(Color.YELLOW);
-                c8.setBackgroundColor(Color.YELLOW);
-                c9.setBackgroundColor(Color.YELLOW);
-                c10.setBackgroundColor(Color.YELLOW);
-                c11.setBackgroundColor(Color.YELLOW);
-                c12.setBackgroundColor(Color.YELLOW);
-                c13.setBackgroundColor(Color.YELLOW);
-                c14.setBackgroundColor(Color.YELLOW);
-                c15.setBackgroundColor(Color.YELLOW);
-                c16.setBackgroundColor(Color.YELLOW);
-                c17.setBackgroundColor(Color.YELLOW);
-                c18.setBackgroundColor(Color.YELLOW);
-                c19.setBackgroundColor(Color.YELLOW);
-                c20.setBackgroundColor(Color.YELLOW);
-                c21.setBackgroundColor(Color.YELLOW);
-                c22.setBackgroundColor(Color.YELLOW);
+                c1.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c2.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c3.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c4.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c5.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c6.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c7.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c8.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c9.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c10.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c11.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c12.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c13.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c14.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c15.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c16.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c17.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c18.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c19.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c20.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c21.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c22.setBackgroundColor(Color.rgb(244, 246, 247 ));
 
 
 
