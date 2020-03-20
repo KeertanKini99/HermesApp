@@ -821,7 +821,7 @@ public class MainActivity extends AppCompatActivity {
                                  });
                  AlertDialog alertDialog = builder.create();
                  alertDialog.show();
-                 
+
               }
               else { flag=0;
                       count++;
