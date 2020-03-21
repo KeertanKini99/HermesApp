@@ -1106,13 +1106,11 @@ public class MainActivity extends AppCompatActivity {
 
                         if(jump=="About Us")
                         {
-                            Toast.makeText(getApplicationContext(), "Spinner 2 value = " + jump, Toast.LENGTH_SHORT).show();
                             Intent i1 = new Intent(getApplicationContext(), AboutUsActivity.class);
                             startActivity(i1);
                         }
                         if(jump=="About The App")
                         {
-                            Toast.makeText(getApplicationContext(), "Spinner 1 value = " + jump, Toast.LENGTH_SHORT).show();
                             Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
                             startActivity(i2);
                         }

@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".AboutAppActivity">
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="525dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/spl1"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
