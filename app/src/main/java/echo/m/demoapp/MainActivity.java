@@ -1050,7 +1050,8 @@ public class MainActivity extends AppCompatActivity {
                                                 int which)
                             {
                                 //Toast.makeText(getApplicationContext(), "App closed", Toast.LENGTH_SHORT).show();
-                                finish();
+                                finishAffinity();
+                                System.exit(0);
                             }
                         });
 
