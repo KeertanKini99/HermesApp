@@ -565,6 +565,8 @@ public class MainActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {                  //Generate Button
             @Override
             public void onClick(View view) {
+
+                b1.setVisibility(View.VISIBLE);
                 flag=1;
                 c1.setBackgroundColor(Color.rgb(244, 246, 247 ));
                 c2.setBackgroundColor(Color.rgb(244, 246, 247 ));

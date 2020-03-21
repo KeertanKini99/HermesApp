@@ -807,6 +807,7 @@
         android:layout_width="88dp"
         android:layout_height="49dp"
         android:text="Go"
+        android:visibility="invisible"
         android:textColor="@color/white"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
