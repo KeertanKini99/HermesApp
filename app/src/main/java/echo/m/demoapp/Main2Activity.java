@@ -52,6 +52,8 @@ public class Main2Activity extends AppCompatActivity {
         next2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                prev2.setVisibility(View.VISIBLE);
                 res = getResources();
                 next = res.obtainTypedArray(R.array.go_c);
                 next22 = res.obtainTypedArray(R.array.go_l);
@@ -104,6 +106,7 @@ public class Main2Activity extends AppCompatActivity {
                 else {
                     //go_c_count=length;
                     Toast.makeText(getApplicationContext(), "Destination arrived!", Toast.LENGTH_SHORT).show();
+                    next2.setVisibility(View.INVISIBLE);
                     flag=1;
 
                 }
@@ -124,6 +127,8 @@ public class Main2Activity extends AppCompatActivity {
         prev2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                next2.setVisibility(View.VISIBLE);
                 Resources res = getResources();
                 TypedArray next = res.obtainTypedArray(
                         R.array.go_c);
@@ -197,6 +202,7 @@ public class Main2Activity extends AppCompatActivity {
                     //flagr=0;
                     //flagl = 0;
                     Toast.makeText(getApplicationContext(), "Source arrived!", Toast.LENGTH_SHORT).show();
+                    prev2.setVisibility(View.INVISIBLE);
                 }
 
                 next.recycle();

@@ -5,8 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/constraintLayout2"
-    android:background="@drawable/bgg"
     tools:context=".Main2Activity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="525dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/spl1"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/m2prev"
@@ -15,6 +27,9 @@
         android:layout_marginTop="597dp"
         android:layout_marginBottom="88dp"
         android:text="Previous"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
@@ -28,6 +43,8 @@
         android:layout_marginTop="597dp"
         android:layout_marginBottom="88dp"
         android:text="Next"
+        android:textColor="@color/white"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.752"

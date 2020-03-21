@@ -19,6 +19,9 @@ import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.style.BackgroundColorSpan;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -38,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
     String[] sourceval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
     String[] destinationval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
+    String[] navigate = {"NAVIGATION","About The App", "About Us"}; //For the app and us pages
     final String[] start = new String[2];
     Spinner src;
     Spinner dest;
+    Spinner nav; //For the app and us pages
     Button b1,b2;
     Button c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22;
     View lineAB,lineAQ,lineBC,lineCD,lineCL,lineDE,lineDU,lineEF,lineER,lineFG,lineGH,lineHI,lineIJ,lineJS,lineJK,lineKT,lineKL,lineLM,lineMN,lineNO,lineNP,linePQ,lineRS,lineRU,lineST,lineVD,lineVC;
@@ -72,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);  //App is now fullscreen
         setContentView(R.layout.activity_main);
         //setContentView(new MyView(this));
+
+        //About App and Us Page Navigation
+        nav = (Spinner) findViewById(R.id.navspinner);
+        ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout);
+        final ArrayAdapter<String> about = new ArrayAdapter<String>(this, R.layout.spinner_center_align, navigate);
+        nav.setAdapter(about);
+
+        constraintLayout.setOnTouchListener(new OnSwipeTouchListener(this));
+
         src = (Spinner) findViewById(R.id.spinner);
         dest = (Spinner) findViewById(R.id.spinner2);
         b1 = (Button) findViewById(R.id.button);
@@ -227,6 +241,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -551,29 +566,31 @@ public class MainActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {                  //Generate Button
             @Override
             public void onClick(View view) {
+
+                b1.setVisibility(View.VISIBLE);
                 flag=1;
-                c1.setBackgroundColor(Color.YELLOW);
-                c2.setBackgroundColor(Color.YELLOW);
-                c3.setBackgroundColor(Color.YELLOW);
-                c4.setBackgroundColor(Color.YELLOW);
-                c5.setBackgroundColor(Color.YELLOW);
-                c6.setBackgroundColor(Color.YELLOW);
-                c7.setBackgroundColor(Color.YELLOW);
-                c8.setBackgroundColor(Color.YELLOW);
-                c9.setBackgroundColor(Color.YELLOW);
-                c10.setBackgroundColor(Color.YELLOW);
-                c11.setBackgroundColor(Color.YELLOW);
-                c12.setBackgroundColor(Color.YELLOW);
-                c13.setBackgroundColor(Color.YELLOW);
-                c14.setBackgroundColor(Color.YELLOW);
-                c15.setBackgroundColor(Color.YELLOW);
-                c16.setBackgroundColor(Color.YELLOW);
-                c17.setBackgroundColor(Color.YELLOW);
-                c18.setBackgroundColor(Color.YELLOW);
-                c19.setBackgroundColor(Color.YELLOW);
-                c20.setBackgroundColor(Color.YELLOW);
-                c21.setBackgroundColor(Color.YELLOW);
-                c22.setBackgroundColor(Color.YELLOW);
+                c1.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c2.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c3.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c4.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c5.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c6.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c7.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c8.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c9.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c10.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c11.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c12.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c13.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c14.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c15.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c16.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c17.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c18.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c19.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c20.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c21.setBackgroundColor(Color.rgb(244, 246, 247 ));
+                c22.setBackgroundColor(Color.rgb(244, 246, 247 ));
 
 
 
@@ -821,7 +838,7 @@ public class MainActivity extends AppCompatActivity {
                                  });
                  AlertDialog alertDialog = builder.create();
                  alertDialog.show();
-                 
+
               }
               else { flag=0;
                       count++;
@@ -1032,9 +1049,11 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog,
                                                 int which)
                             {
+                                //Toast.makeText(getApplicationContext(), "App closed", Toast.LENGTH_SHORT).show();
                                 finish();
                             }
                         });
+
 
         builder
                 .setNegativeButton(
@@ -1052,5 +1071,62 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+
+    //Handling double tap on the screen
+    class OnSwipeTouchListener implements View.OnTouchListener {
+
+        private final GestureDetector gestureDetector;
+
+        public OnSwipeTouchListener(Context ctx) {
+            gestureDetector = new GestureDetector(ctx, new GestureListener());
+        }
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            return gestureDetector.onTouchEvent(event);
+        }
+        private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
+            private static final int SWIPE_THRESHOLD = 300;
+            private static final int SWIPE_VELOCITY_THRESHOLD = 300;
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return true;
+            }
+            @Override
+            public boolean onSingleTapConfirmed(MotionEvent e) {
+                return true;
+            }
+            @Override
+            public void onLongPress(MotionEvent e) {
+            }
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                nav.setId(0);
+                nav.performClick();
+                nav.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        String jump = parent.getItemAtPosition(position).toString();
+
+                        if(jump=="About Us")
+                        {
+                            Intent i1 = new Intent(getApplicationContext(), AboutUsActivity.class);
+                            startActivity(i1);
+                        }
+                        if(jump=="About The App")
+                        {
+                            Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
+                            startActivity(i2);
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+                return true;
+            }
+        }
     }
 }

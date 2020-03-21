@@ -4,14 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/app_logo"
+        android:icon="@drawable/mal"
         android:label="Hermes App"
-        android:roundIcon="@drawable/app_logo"
-        android:supportsRtl="true"
+        android:roundIcon="@drawable/mal"
         android:screenOrientation="portrait"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".AboutAppActivity"></activity>
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
