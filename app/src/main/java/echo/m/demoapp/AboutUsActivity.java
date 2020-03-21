@@ -3,6 +3,7 @@ package echo.m.demoapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,7 +11,8 @@ import android.widget.ImageButton;
 public class AboutUsActivity extends AppCompatActivity {
 
     ImageButton kishan, keertan;
-    Dialog myDialog;
+    Dialog diopen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,23 +20,30 @@ public class AboutUsActivity extends AppCompatActivity {
 
         kishan = (ImageButton) findViewById(R.id.kishanButton);
         keertan = (ImageButton) findViewById(R.id.keertanButton);
+        diopen=new Dialog(this);
 
         kishan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myDialog.setContentView(R.layout.prof_kishan);
-                myDialog.setCanceledOnTouchOutside(true);
+                diopen.setContentView(R.layout.prof_kishan);
+                diopen.setCanceledOnTouchOutside(true);
+                diopen.show();
             }
         });
 
         keertan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myDialog.setContentView(R.layout.prof_keertan);
-                myDialog.setCanceledOnTouchOutside(true);
+                diopen.setContentView(R.layout.prof_keertan);
+                diopen.setCanceledOnTouchOutside(true);
+                diopen.show();
             }
         });
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(AboutUsActivity.this, MainActivity.class);
+        startActivity(i);
+    }
 }

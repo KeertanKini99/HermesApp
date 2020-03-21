@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         //About App and Us Page Navigation
         nav = (Spinner) findViewById(R.id.navspinner);
         ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout);
-        final ArrayAdapter<String> about = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, navigate);
+        final ArrayAdapter<String> about = new ArrayAdapter<String>(this, R.layout.spinner_center_align, navigate);
         nav.setAdapter(about);
 
         constraintLayout.setOnTouchListener(new OnSwipeTouchListener(this));
@@ -241,6 +241,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1100,6 +1101,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public boolean onDoubleTap(MotionEvent e) {
+                nav.setId(0);
                 nav.performClick();
                 nav.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override

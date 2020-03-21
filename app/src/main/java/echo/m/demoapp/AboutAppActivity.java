@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,12 +18,13 @@ public class AboutAppActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_app);
 
         update = (Button) findViewById(R.id.update);
+
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder
                         = new AlertDialog
-                        .Builder(getApplicationContext());
+                        .Builder(AboutAppActivity.this);
                 builder.setMessage("App is already up to date.");
                 builder.setTitle("Check for Updates");
 
@@ -45,5 +47,11 @@ public class AboutAppActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(AboutAppActivity.this, MainActivity.class);
+        startActivity(i);
     }
 }
