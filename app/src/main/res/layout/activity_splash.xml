@@ -9,12 +9,15 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/splashimage"
-        android:layout_width="574dp"
-        android:layout_height="736dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
         android:layout_centerInParent="true"
-        android:background="@drawable/consti"
+        android:src="@mipmap/consti"
         android:minWidth="0dp"
         android:minHeight="0dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -8,8 +8,10 @@
 
     <ImageView
     android:id="@+id/background"
-    android:layout_width="525dp"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scaleType="centerCrop"
+    android:adjustViewBounds="true"
     android:layout_centerInParent="true"
     android:background="@drawable/spl1"
     android:minWidth="0dp"
