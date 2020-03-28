@@ -39,7 +39,7 @@
         android:layout_width="130dp"
         android:layout_height="26dp"
         android:gravity="center_horizontal"
-        android:text="HERMES APP"
+        android:text="HermesApp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"

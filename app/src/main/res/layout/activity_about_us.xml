@@ -26,7 +26,7 @@
         android:layout_width="355dp"
         android:layout_height="27dp"
         android:layout_gravity="center_horizontal"
-        android:text="Hermes App: NMAMIT Navigation Map"
+        android:text="HermesApp: NMAMIT Navigation Map"
         android:textAlignment="center"
         android:textSize="14dp"
         android:textStyle="bold"
