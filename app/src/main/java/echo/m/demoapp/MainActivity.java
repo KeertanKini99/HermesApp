@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
     View lineAB,lineAQ,lineBC,lineCD,lineCL,lineDE,lineDU,lineEF,lineER,lineFG,lineGH,lineHI,lineIJ,lineJS,lineJK,lineKT,lineKL,lineLM,lineMN,lineNO,lineNP,linePQ,lineRS,lineRU,lineST,lineVD,lineVC;
     static int graph[][];
     static int via[][];
-    static int rt[][];
+   // static int rt[][];
     static int v=22;
-    static int e=27;
+    //static int e=27;
     int[] val;
     int[] path2;
     int[] path;
@@ -150,13 +150,13 @@ public class MainActivity extends AppCompatActivity {
 
         graph = new int[v][v];
         via = new int[v][v];
-        rt = new int[v][v];
+       // rt = new int[v][v];
         path2=new int[20];
-                       //A B C   D   E   F   G   H   I   J    K   L   M  N   O   P   Q  R  S   T    U
+                       //A B C   D   E   F   G   H   I   J    K   L   M  N   O   P   Q  R  S   T  U V
         val=new int[] {
                 /*A*/ 0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,
                 /*B*/ 1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
-                /*C*/ 999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,999,1,
+                /*C*/ 999,1,0,1,999,999,999,999,999,999,999,2,999,999,999,999,999,999,999,999,999,1,
                 /*D*/ 999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,1,
                 /*E*/ 999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,
                 /*F*/ 999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 /*I*/ 999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,999,999,999,
                 /*J*/ 999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,999,
                 /*K*/ 999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,1,999,999,
-                /*L*/ 999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,
+                /*L*/ 999,999,2,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,999,
                 /*M*/ 999,999,999,999,999,999,999,999,999,999,999,1,0,1,999,999,999,999,999,999,999,999,
                 /*N*/ 999,999,999,999,999,999,999,999,999,999,999,999,1,0,1,1,999,999,999,999,999,999,
                 /*O*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,999,999,
@@ -177,14 +177,42 @@ public class MainActivity extends AppCompatActivity {
                 /*U*/ 999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,0,999,
                 /*V*/ 999,999,1,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,0};
         int d=0;
-        for(int i = 0; i < v; i++)
-            for(int j = 0; j < v; j++)
-            {
-                graph[i][j]=val[d];
+        for(int i = 0; i < v; i++) {
+            for (int j = 0; j < v; j++) {
+                graph[i][j] = val[d];
                 d++;
+                if (graph[i][j] != 999)
+                    via[i][j] = j;
+                else
+                    via[i][j] = 999;
             }
+        }
 
-        for(int i = 0; i < v; i++)
+        int i,j,k,x=0;
+        for(i=0;i<v;i++) {
+            x=0;
+
+            for (j = 0; j < v; j++) {
+
+                for (k = 0; k < v && i != j; k++) {
+                    if (graph[i][j] != 999)
+                     {
+                        x = graph[i][j] + graph[j][k];
+                        if (graph[i][k] > x) {
+                            graph[i][k] = x;
+                            via[i][k] = via[i][j];
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+
+
+        /*for(int i = 0; i < v; i++)
         {
             for(int j = 0; j < v; j++)
             {
@@ -210,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
             k++;
             if(k == v)
                 k = 0;
-        }
+        }*/
 
 
 
@@ -866,7 +894,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void update_table(int source)
+    /*public void update_table(int source)
     {
         for(int i = 0; i < v; i++)
         {
@@ -888,7 +916,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
     public void findpath(int i,int j)
     {
       path2[p]=i;
