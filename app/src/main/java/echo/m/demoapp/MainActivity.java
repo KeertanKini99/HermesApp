@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int i,j,k,x=0;
-        for(i=0;i<v;i++) {
+        /*for(i=0;i<v;i++) {
             x=0;
 
             for (j = 0; j < v; j++) {
@@ -208,7 +208,33 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-        }
+        }*/
+
+        do
+        {
+            count=0;
+            for(i=0;i<v;i++)//We choose arbitary vertex k and we calculate the direct distance from the node i to k using the cost matrix
+                //and add the distance from k to node j
+                for(j=0;j<v;j++)
+                    for(k=0;k<v;k++){
+                /*if(c[i][k] + c[k][j] < c[i][j])
+           {
+             c[i][j] = c[i][k] + c[k][j];
+             via[i][j] = k;
+             count++;
+           }*/
+
+                        x=graph[i][j]+graph[j][k];
+                        if(graph[i][k]>x)
+                        {
+                            graph[i][k]=x;
+                            via[i][k]=via[i][j];
+                            count++;
+
+                        }
+                    }
+        }while(count!=0);
+
 
 
 
