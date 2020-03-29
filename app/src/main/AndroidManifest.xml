@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="echo.m.demoapp">
 
+    <supports-screens
+        android:largeScreens="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/mal"
-        android:label="Hermes App"
+        android:label="HermesApp"
         android:roundIcon="@drawable/mal"
         android:screenOrientation="portrait"
         android:supportsRtl="true"

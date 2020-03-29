@@ -1128,7 +1128,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    //Handling double tap on the screen
+    //Handling double tap and long press on the screen
     class OnSwipeTouchListener implements View.OnTouchListener {
 
         private final GestureDetector gestureDetector;
@@ -1153,6 +1153,32 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onLongPress(MotionEvent e) {
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                nav.setId(0);
+                nav.performClick();
+                nav.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        String jump = parent.getItemAtPosition(position).toString();
+
+                        if(jump=="About Us")
+                        {
+                            Intent i1 = new Intent(getApplicationContext(), AboutUsActivity.class);
+                            startActivity(i1);
+                        }
+                        if(jump=="About The App")
+                        {
+                            Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
+                            startActivity(i2);
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             }
             @Override
             public boolean onDoubleTap(MotionEvent e) {

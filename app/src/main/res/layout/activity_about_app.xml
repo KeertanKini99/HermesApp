@@ -8,8 +8,10 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="525dp"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
         android:layout_centerInParent="true"
         android:background="@drawable/spl1"
         android:minWidth="0dp"
@@ -22,14 +24,14 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
+        app:layout_constraintVertical_bias="0.041"
         app:srcCompat="@drawable/mal" />
 
     <TextView
@@ -37,7 +39,7 @@
         android:layout_width="130dp"
         android:layout_height="26dp"
         android:gravity="center_horizontal"
-        android:text="HERMES APP"
+        android:text="HermesApp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -47,7 +49,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintVertical_bias="0.289" />
 
     <TextView
         android:id="@+id/textView9"
@@ -137,10 +139,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58000004" />
+        app:layout_constraintVertical_bias="0.579" />
 
     <TextView
         android:id="@+id/block1"
@@ -168,7 +170,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.68" />
@@ -199,10 +201,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.779" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
