@@ -216,21 +216,21 @@ public class MainActivity extends AppCompatActivity {
             for(i=0;i<v;i++)//We choose arbitary vertex k and we calculate the direct distance from the node i to k using the cost matrix
                 //and add the distance from k to node j
                 for(j=0;j<v;j++)
-                    for(k=0;k<v;k++){
+                    for(k=0;k<v;k++) {
                 /*if(c[i][k] + c[k][j] < c[i][j])
            {
              c[i][j] = c[i][k] + c[k][j];
              via[i][j] = k;
              count++;
            }*/
+                        if (graph[i][j] != 999) {
+                            x = graph[i][j] + graph[j][k];
+                            if (graph[i][k] > x) {
+                                graph[i][k] = x;
+                                via[i][k] = via[i][j];
+                                count++;
 
-                        x=graph[i][j]+graph[j][k];
-                        if(graph[i][k]>x)
-                        {
-                            graph[i][k]=x;
-                            via[i][k]=via[i][j];
-                            count++;
-
+                            }
                         }
                     }
         }while(count!=0);
