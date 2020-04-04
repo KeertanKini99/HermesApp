@@ -139,18 +139,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.68" />
 
-    <TextView
-        android:id="@+id/prof8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mrs_pallavi_k_n_m_tech_ph_d_asst_prof_gd_ii"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
 
 
 
