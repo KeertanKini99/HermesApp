@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner nav; //For the app and us pages
     Button b1,b2;
     Button c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22;
-    View lineAB,lineAQ,lineBC,lineCD,lineCL,lineDE,lineDU,lineEF,lineER,lineFG,lineGH,lineHI,lineIJ,lineJS,lineJK,lineKT,lineKL,lineLM,lineMN,lineNO,lineNP,linePQ,lineRS,lineRU,lineST,lineVD,lineVC;
+    View lineAB,lineAQ,lineBC,lineCD,lineCL,lineDE,lineDU,lineEF,lineER,lineFG,lineGH,lineHI,lineIJ,lineJS,lineJK,lineKT,lineKL,lineLM,lineMN,lineNO,lineNP,linePQ,lineRU,lineST,lineVD,lineVC;
     static int graph[][];
     static int via[][];
    // static int rt[][];
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         lineNO=(View)findViewById(R.id.lineNO);
         lineNP=(View)findViewById(R.id.lineNP);
         linePQ=(View)findViewById(R.id.linePQ);
-        lineRS=(View)findViewById(R.id.lineRS);
+        //lineRS=(View)findViewById(R.id.lineRS);
         lineRU=(View)findViewById(R.id.lineRU);
         lineST=(View)findViewById(R.id.lineST);
         lineVD=(View)findViewById(R.id.lineVD);
@@ -171,8 +171,8 @@ public class MainActivity extends AppCompatActivity {
                 /*O*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,999,999,
                 /*P*/ 999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,0,1,999,999,999,999,999,
                 /*Q*/ 1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,1,0,999,999,999,999,999,
-                /*R*/ 999,999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,0,1,999,1,999,
-                /*S*/ 999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,1,999,999,
+                /*R*/ 999,999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,0,999,999,1,999,
+                /*S*/ 999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,999,0,1,999,999,
                 /*T*/ 999,999,999,999,999,999,999,999,999,999,1,999,999,999,999,999,999,999,1,0,999,999,
                 /*U*/ 999,999,999,1,999,999,999,999,999,999,999,999,999,999,999,999,999,1,999,999,0,999,
                 /*V*/ 999,999,1,1,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,0};
@@ -670,7 +670,7 @@ public class MainActivity extends AppCompatActivity {
                 lineNO.setBackgroundColor(Color.RED);
                 lineNP.setBackgroundColor(Color.RED);
                 linePQ.setBackgroundColor(Color.RED);
-                lineRS.setBackgroundColor(Color.RED);
+                //lineRS.setBackgroundColor(Color.RED);
                 lineRU.setBackgroundColor(Color.RED);
                 lineST.setBackgroundColor(Color.RED);
                 lineVD.setBackgroundColor(Color.RED);
@@ -837,25 +837,25 @@ public class MainActivity extends AppCompatActivity {
                             linePQ.setBackgroundColor(Color.GREEN);
                             pathl[i] = 21;
                         }
-                       if ((path[i] == 17 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 17)) {
+                       /*if ((path[i] == 17 && path[i + 1] == 18) || (path[i] == 18 && path[i + 1] == 17)) {
                            lineRS.setBackgroundColor(Color.GREEN);
                            pathl[i] = 22;
-                       }
+                       }*/
                         if ((path[i] == 17 && path[i + 1] == 20) || (path[i] == 20 && path[i + 1] == 17)) {
                             lineRU.setBackgroundColor(Color.GREEN);
-                            pathl[i] = 23;
+                            pathl[i] = 22;
                         }
                         if ((path[i] == 18 && path[i + 1] == 19) || (path[i] == 19 && path[i + 1] == 18)) {
                             lineST.setBackgroundColor(Color.GREEN);
-                            pathl[i] = 24;
+                            pathl[i] = 23;
                         }
                         if ((path[i] == 21 && path[i + 1] == 3) || (path[i] == 3 && path[i + 1] == 21)) {
                             lineVD.setBackgroundColor(Color.GREEN);
-                            pathl[i] = 25;
+                            pathl[i] = 24;
                         }
                         if ((path[i] == 21 && path[i + 1] == 2) || (path[i] == 2 && path[i + 1] == 21)) {
                             lineVC.setBackgroundColor(Color.GREEN);
-                            pathl[i] = 26;
+                            pathl[i] = 25;
                         }
 
                     }
