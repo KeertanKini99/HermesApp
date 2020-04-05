@@ -33,6 +33,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
+
 import static android.view.View.GONE;
 import static android.widget.RelativeLayout.TRUE;
 
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     String[] sourceval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
     String[] destinationval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
-    String[] navigate = {"NAVIGATION","About The App", "About Us"}; //For the app and us pages
+    String[] navigate = {"NAVIGATION", "Themes", "About The App", "About Us"}; //For the app and us pages
     final String[] start = new String[2];
     Spinner src;
     Spinner dest;
@@ -65,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
     Dialog myDialog;
     TextView tclose;
 
-
+    //Theme Selection
+    ImageView popup;
+    String switchsel;
 
 
 
@@ -77,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);  //App is now fullscreen
         setContentView(R.layout.activity_main);
         //setContentView(new MyView(this));
+
+        //Theme Selection
+        popup = (ImageView) findViewById(R.id.popupback);
+
+
 
         //About App and Us Page Navigation
         nav = (Spinner) findViewById(R.id.navspinner);
@@ -1131,6 +1140,9 @@ public class MainActivity extends AppCompatActivity {
     //Handling double tap and long press on the screen
     class OnSwipeTouchListener implements View.OnTouchListener {
 
+        // Popup window content
+        ImageView popup = (ImageView) findViewById(R.id.popupback);
+
         private final GestureDetector gestureDetector;
 
         public OnSwipeTouchListener(Context ctx) {
@@ -1171,6 +1183,24 @@ public class MainActivity extends AppCompatActivity {
                             Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
                             startActivity(i2);
                         }
+                        if(jump=="Themes")
+                        {
+                            Intent i3 = new Intent(getApplicationContext(), ThemesActivity.class);
+                            i3.putExtra("Popupback", (Serializable) popup);
+                            startActivity(i3);
+
+                            Bundle b = getIntent().getExtras();
+                            try {
+                                switchsel = b.getString("Switch");
+                                if (switchsel == "ember") {
+                                    popup.setImageResource(R.drawable.spl1);
+                                } else {
+                                    popup.setImageResource(R.drawable.spl2);
+                                }
+                            }
+                            catch (Exception e){}
+
+                        }
                     }
 
                     @Override
@@ -1198,6 +1228,26 @@ public class MainActivity extends AppCompatActivity {
                         {
                             Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
                             startActivity(i2);
+                        }
+                        if(jump=="Themes")
+                        {
+                            Intent i3 = new Intent(getApplicationContext(), ThemesActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("popup", R.id.popupback);
+                            i3.putExtras(bundle);
+                            startActivity(i3);
+
+                            Bundle b = getIntent().getExtras();
+                            try {
+                                switchsel = b.getString("Switch");
+                                if (switchsel == "ember") {
+                                    popup.setImageResource(R.drawable.spl1);
+                                } else {
+                                    popup.setImageResource(R.drawable.spl2);
+                                }
+                            }
+                            catch (Exception e){}
+
                         }
                     }
 
