@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.289" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/subtitle"
         android:layout_width="227dp"
         android:layout_height="26dp"
         android:gravity="center_horizontal"
@@ -77,10 +77,9 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.926" />
 
     <TextView
         android:id="@+id/appversion1"
@@ -205,6 +204,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.779" />
+
+    <TextView
+        android:id="@+id/basetitle"
+        android:layout_width="355dp"
+        android:layout_height="27dp"
+        android:layout_gravity="center_horizontal"
+        android:text="HermesApp: NMAMIT Navigation Map"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
