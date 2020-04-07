@@ -63,7 +63,7 @@ public class AboutUsActivity extends AppCompatActivity {
 
             TextView title = (TextView) findViewById(R.id.textView10); //title
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
-            title = (TextView) findViewById(R.id.textView9); //base
+            title = (TextView) findViewById(R.id.basetitle); //base
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
 
         }
@@ -71,7 +71,7 @@ public class AboutUsActivity extends AppCompatActivity {
             ImageView back = (ImageView) findViewById(R.id.background); //background
             back.setBackgroundResource(R.drawable.spl2);
 
-            TextView title = (TextView) findViewById(R.id.textView9); //base
+            TextView title = (TextView) findViewById(R.id.basetitle); //base
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
             title = (TextView) findViewById(R.id.textView10); //title
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));

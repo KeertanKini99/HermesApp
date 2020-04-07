@@ -72,7 +72,7 @@ public class AboutAppActivity extends AppCompatActivity {
             title = (TextView) findViewById(R.id.basetitle); // Base
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
 
-            TextView info = (TextView) findViewById(R.id.textView9);// subtitle
+            TextView info = (TextView) findViewById(R.id.subtitle);// subtitle
             info.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
             info = (TextView) findViewById(R.id.appversion1);// appversion 1
             info.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
@@ -106,7 +106,7 @@ public class AboutAppActivity extends AppCompatActivity {
             title = (TextView) findViewById(R.id.basetitle); // Base
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
 
-            TextView info = (TextView) findViewById(R.id.textView9);// subtitle
+            TextView info = (TextView) findViewById(R.id.subtitle);// subtitle
             info.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
             info = (TextView) findViewById(R.id.appversion1);// appversion 1
             info.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
