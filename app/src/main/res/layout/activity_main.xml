@@ -11,16 +11,18 @@
         android:id="@+id/background"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
         android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
         android:background="@drawable/spl1"
         android:minWidth="0dp"
         android:minHeight="0dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/c14"
@@ -159,7 +161,7 @@
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <View
         android:id="@+id/lineMN"
@@ -765,6 +767,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:background="#1AFFFFFF"
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -781,6 +784,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:background="#1AFFFFFF"
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -830,7 +834,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.02999998" />
 
     <TextView
         android:id="@+id/textView2"
@@ -842,9 +846,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintVertical_bias="0.77555558" />
 
     <Spinner
         android:id="@+id/navspinner"
@@ -859,6 +864,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/themeVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="Ember"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

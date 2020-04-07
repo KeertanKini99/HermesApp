@@ -79,7 +79,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.926" />
+=======
+        app:layout_constraintVertical_bias="0.936" />
+>>>>>>> 9541cb08db185422547c2371b5cf6a8714245879
 
     <TextView
         android:id="@+id/appversion1"
