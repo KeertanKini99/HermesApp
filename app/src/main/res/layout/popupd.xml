@@ -10,7 +10,7 @@
     android:background="@color/colorPrimaryDark">
 
     <ImageView
-        android:id="@+id/popupback"
+        android:id="@+id/popupbackD"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scaleType="centerCrop"

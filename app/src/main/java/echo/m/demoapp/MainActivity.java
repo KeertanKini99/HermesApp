@@ -3,11 +3,13 @@ package echo.m.demoapp;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
     String[] destinationval = {"CSL04","CSL03","HOD's CABIN","CSL05","CSL06","STAFF ROOM","CABIN (Dr. SHARADA U. SHENOY)","CABIN (Dr. D.K. SREEKANTHA)","CSL07","ISL01","ISL02","BALCONY","ISL03","CSL02","CSL01","STAIRS","PG LAB","CABIN (Dr. ARAVINDA C.V.)","CABIN (Dr. VENUGOPAL P.S.)","CABIN (Dr. ROSHAN FERNANDES)","CABIN (Mr. RADHAKRISHNA D.)","WASHROOMS"};
     String[] navigate = {"NAVIGATION", "Themes", "About The App", "About Us"}; //For the app and us pages
     final String[] start = new String[2];
+
+    String PREFS_NAME = "current_theme";
+
     Spinner src;
     Spinner dest;
     Spinner nav; //For the app and us pages
@@ -65,14 +70,10 @@ public class MainActivity extends AppCompatActivity {
     int st,dt,p=0;
 
     Dialog myDialog;
-    TextView tclose;
 
     //Theme Selection
-    ImageView popup;
-    String switchsel;
-
-
-
+    ImageView back;
+    String defTheme = "frost";
 
 
     @Override
@@ -83,7 +84,43 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(new MyView(this));
 
         //Theme Selection
-        popup = (ImageView) findViewById(R.id.popupback);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        defTheme = settings.getString("themeval", defTheme);
+        Log.w("Theme is", defTheme);
+        back = (ImageView) findViewById(R.id.background);
+
+            if(defTheme.equals("frost"))
+            {
+                ThemeFrost();
+            }
+            else{
+                ThemeEmber();
+            }
+
+        //popup = (ImageView) findViewById(R.id.popupback);
+
+        try{
+            Bundle b = getIntent().getExtras();
+            defTheme = b.getString("Switch");
+            settings = getSharedPreferences(PREFS_NAME, 0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putString("themeval", defTheme);
+            editor.commit();
+
+            Log.w("App theme is ", defTheme + " inside try block");
+
+            if(defTheme.equals("frost")) {
+                ThemeFrost();
+            }
+            else{
+                ThemeEmber();
+            }
+        }
+        catch (Exception e){
+            //changeAppTheme(defTheme);
+        }
+        //Log.w("POINT", "Here is 2!");
+
 
 
 
@@ -279,8 +316,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        final ArrayAdapter<String> a1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, sourceval);
-        ArrayAdapter<String> a2 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, destinationval);
+        final ArrayAdapter<String> a1 = new ArrayAdapter<String>(this, R.layout.base_spinner, sourceval);
+        ArrayAdapter<String> a2 = new ArrayAdapter<String>(this, R.layout.base_spinner, destinationval);
         src.setAdapter(a1);
         dest.setAdapter(a2);
         src.setOnItemSelectedListener(new sourceclass());
@@ -914,7 +951,7 @@ public class MainActivity extends AppCompatActivity {
                   bundle.putIntArray("path", path);
                   bundle.putInt("pval", p);
                   bundle.putIntArray("pathline", pathl);
-
+                  bundle.putString("Switch", defTheme);
 
                   i.putExtras(bundle);
 
@@ -927,6 +964,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 
     /*public void update_table(int source)
@@ -1140,9 +1178,6 @@ public class MainActivity extends AppCompatActivity {
     //Handling double tap and long press on the screen
     class OnSwipeTouchListener implements View.OnTouchListener {
 
-        // Popup window content
-        ImageView popup = (ImageView) findViewById(R.id.popupback);
-
         private final GestureDetector gestureDetector;
 
         public OnSwipeTouchListener(Context ctx) {
@@ -1176,29 +1211,19 @@ public class MainActivity extends AppCompatActivity {
                         if(jump=="About Us")
                         {
                             Intent i1 = new Intent(getApplicationContext(), AboutUsActivity.class);
+                            i1.putExtra("Switch", defTheme);
                             startActivity(i1);
                         }
                         if(jump=="About The App")
                         {
                             Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
+                            i2.putExtra("Switch", defTheme);
                             startActivity(i2);
                         }
                         if(jump=="Themes")
                         {
                             Intent i3 = new Intent(getApplicationContext(), ThemesActivity.class);
-                            i3.putExtra("Popupback", (Serializable) popup);
                             startActivity(i3);
-
-                            Bundle b = getIntent().getExtras();
-                            try {
-                                switchsel = b.getString("Switch");
-                                if (switchsel == "ember") {
-                                    popup.setImageResource(R.drawable.spl1);
-                                } else {
-                                    popup.setImageResource(R.drawable.spl2);
-                                }
-                            }
-                            catch (Exception e){}
 
                         }
                     }
@@ -1222,31 +1247,20 @@ public class MainActivity extends AppCompatActivity {
                         if(jump=="About Us")
                         {
                             Intent i1 = new Intent(getApplicationContext(), AboutUsActivity.class);
+                            i1.putExtra("Switch", defTheme);
                             startActivity(i1);
                         }
                         if(jump=="About The App")
                         {
                             Intent i2 = new Intent(getApplicationContext(), AboutAppActivity.class);
+                            i2.putExtra("Switch", defTheme);
                             startActivity(i2);
                         }
                         if(jump=="Themes")
                         {
                             Intent i3 = new Intent(getApplicationContext(), ThemesActivity.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putInt("popup", R.id.popupback);
-                            i3.putExtras(bundle);
                             startActivity(i3);
-
-                            Bundle b = getIntent().getExtras();
-                            try {
-                                switchsel = b.getString("Switch");
-                                if (switchsel == "ember") {
-                                    popup.setImageResource(R.drawable.spl1);
-                                } else {
-                                    popup.setImageResource(R.drawable.spl2);
-                                }
-                            }
-                            catch (Exception e){}
+                            Log.w("POINT", "Here is 1!");
 
                         }
                     }
@@ -1260,4 +1274,64 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
+    //Changing app theme
+    private void ThemeEmber() {
+        Log.w("Go", "I'm here in Ember");
+        back.setBackgroundResource(R.drawable.spl2); // background
+
+        TextView version = (TextView) findViewById(R.id.themeVer);
+        version.setText("Ember");
+
+        TextView title = (TextView) findViewById(R.id.textView); //source
+        title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        title = (TextView) findViewById(R.id.textView2); //dest
+        title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+
+        Button button = (Button) findViewById(R.id.button); //generate
+        button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+        button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        button = (Button) findViewById(R.id.button2); //go
+        button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+        button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+
+        TextView subtext = (TextView) findViewById(R.id.textView3); // ramanujan block
+        subtext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        subtext = (TextView) findViewById(R.id.textView7); // main stairs
+        subtext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        subtext = (TextView) findViewById(R.id.textView6); // apj block
+        subtext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+
+
+    }
+
+    private void ThemeFrost() {
+        Log.w("Go", "I'm here in Frost");
+        back.setBackgroundResource(R.drawable.spl1);
+
+        TextView version = (TextView) findViewById(R.id.themeVer);
+        version.setText("Frost");
+
+        TextView title = (TextView) findViewById(R.id.textView); //source
+        title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+        title = (TextView) findViewById(R.id.textView2); //dest
+        title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+
+        Button button = (Button) findViewById(R.id.button); //generate
+        button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+        button = (Button) findViewById(R.id.button2); //go
+        button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+
+        TextView subtext = (TextView) findViewById(R.id.textView3); // ramanujan block
+        subtext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
+        subtext = (TextView) findViewById(R.id.textView7); // main stairs
+        subtext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
+        subtext = (TextView) findViewById(R.id.textView6); // apj block
+        subtext.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
+
+    }
+
 }

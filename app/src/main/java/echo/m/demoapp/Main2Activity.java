@@ -1,8 +1,9 @@
 package echo.m.demoapp;
 import androidx.appcompat.app.AppCompatActivity;
         import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
-        import android.content.res.Resources;
+import android.content.res.Resources;
         import android.content.res.TypedArray;
         import android.graphics.drawable.Drawable;
         import android.os.Bundle;
@@ -24,6 +25,7 @@ public class Main2Activity extends AppCompatActivity {
     Resources res;
     TypedArray next,next22;
     Drawable x,y;
+    String theme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class Main2Activity extends AppCompatActivity {
         next = res.obtainTypedArray(R.array.go_c);
         next22 = res.obtainTypedArray(R.array.go_l);
          x = next.getDrawable(path22[go_c_count]);
+        theme = bundle.getString("Switch");
+        SetAppTheme(theme);
 
         im2.setImageDrawable(x);
         go_c_count++;
@@ -208,5 +212,31 @@ public class Main2Activity extends AppCompatActivity {
                 next.recycle();
             }
         });
+    }
+
+    private void SetAppTheme(String theme) {
+        if(theme.equals("frost")){
+            ImageView back = (ImageView) findViewById(R.id.background);
+            back.setBackgroundResource(R.drawable.spl1);
+
+
+            Button button = (Button) findViewById(R.id.m2prev); //previous
+            button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+            button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+            button = (Button) findViewById(R.id.m2next); //next
+            button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+            button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+        }
+        else{
+            ImageView back = (ImageView) findViewById(R.id.background);
+            back.setBackgroundResource(R.drawable.spl2);
+
+            Button button = (Button) findViewById(R.id.m2prev); //previous
+            button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+            button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+            button = (Button) findViewById(R.id.m2next); //next
+            button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+            button.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
+        }
     }
 }
