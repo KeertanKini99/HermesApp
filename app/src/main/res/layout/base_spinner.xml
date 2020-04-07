@@ -21,6 +21,7 @@
     style="?attr/spinnerDropDownItemStyle"
     android:singleLine="true"
     android:textColor="#808080"
+    android:gravity="center"
     android:textStyle="bold"
     android:layout_width="match_parent"
     android:layout_height="?attr/dropdownListPreferredItemHeight"
