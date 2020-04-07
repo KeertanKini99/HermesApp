@@ -61,19 +61,19 @@ public class AboutUsActivity extends AppCompatActivity {
             ImageView back = (ImageView) findViewById(R.id.background); //background
             back.setBackgroundResource(R.drawable.spl1);
 
-            TextView title = (TextView) findViewById(R.id.textView9); //title
-            title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
-            title = (TextView) findViewById(R.id.textView10); //base
-            title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
+            TextView title = (TextView) findViewById(R.id.textView10); //title
+            title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+            title = (TextView) findViewById(R.id.textView9); //base
+            title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
 
         }
         else{
             ImageView back = (ImageView) findViewById(R.id.background); //background
             back.setBackgroundResource(R.drawable.spl2);
 
-            TextView title = (TextView) findViewById(R.id.textView9); //title
+            TextView title = (TextView) findViewById(R.id.textView9); //base
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-            title = (TextView) findViewById(R.id.textView10); //base
+            title = (TextView) findViewById(R.id.textView10); //title
             title.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
 
         }
