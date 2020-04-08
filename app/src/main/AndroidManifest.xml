@@ -4,9 +4,9 @@
 
     <supports-screens
         android:largeScreens="true"
-        android:smallScreens="true"
         android:normalScreens="true"
-        android:xlargeScreens="true"/>
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +16,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutAppActivity"></activity>
+        <activity android:name=".ThemesActivity"></activity>
+        <activity android:name=".AboutAppActivity" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity" />
