@@ -2,7 +2,7 @@
 
 Navigation App for NMAMIT, Nitte.
 
-##About
+## About
 
 HermesApp is a flexible, user-friendly app designed with the sole purpose of being a highly efficient app for the students. The app, at its core, is a navigation device.
 
