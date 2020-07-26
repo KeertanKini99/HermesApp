@@ -30,5 +30,6 @@ Once familiar with the route, if the user is one with privileges, then he/she wi
 
 ## Working of the App
 
-* _Home screen_
+* *Home screen*
+
 
