@@ -32,17 +32,17 @@ Once familiar with the route, if the user is one with privileges, then he/she wi
 
 * **Home screen** _(The landing page of the app, which shows the map of the current floor)_
 
-![image](https://user-images.githubusercontent.com/49337267/88473124-09ef0900-cf38-11ea-8b77-7bc700f3a8fa.png)
+![home](https://user-images.githubusercontent.com/49337267/88475695-fa7bba00-cf4f-11ea-8924-864a63622157.png)
 
 
 * **Brief information** _(Brief information on the selected tab is given to the user. Name of the room, Name of the professor the room is assigned to, Qualification and Designation)_
 
-![image](https://user-images.githubusercontent.com/49337267/88473133-1bd0ac00-cf38-11ea-8343-45b638cea0c6.png)
+![brief](https://user-images.githubusercontent.com/49337267/88475709-1da66980-cf50-11ea-81bd-745d2b6615b1.png)
 
 
 * **Path Generation** _(On selecting a source and destination from the dropdowns provided, and then clicking on the 'Generate' button, a virtual path is displayed on the map. This path starts from the source node and traverses through multiple intermediate nodes, before reaching the destination node)_
 
-![image](https://user-images.githubusercontent.com/49337267/88473141-2db24f00-cf38-11ea-9edb-4f5d210e7573.png)
+![generate](https://user-images.githubusercontent.com/49337267/88475711-2a2ac200-cf50-11ea-9d09-b5a1ba61d413.png)
 
 
 * **Navigation** _(The navigation is done photographically. Node and path are alternated to provide a more comprehensive and confusion-free access to intended locations. One reaching the destination node, a popup message appears notifying that the destination has been reached. The user can also go back to the previous location, in case they get lost during traversing)_ 
@@ -56,7 +56,7 @@ Two themes have been added to the app to provide users with the option to switch
 
 **Frost**
 
-![image](https://user-images.githubusercontent.com/49337267/88474875-6b1ed880-cf48-11ea-972e-3c89fc9a1808.png)
+![theme](https://user-images.githubusercontent.com/49337267/88475713-3282fd00-cf50-11ea-929d-1b1674ab8988.png)
 
 **Ember**
 
