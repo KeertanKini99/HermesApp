@@ -4,7 +4,7 @@ Navigation App for NMAMIT, Nitte.
 
 ![newapplogo](https://user-images.githubusercontent.com/49337267/88473030-0e66f200-cf37-11ea-922c-f45ac3419dbc.png)
 
-## About
+## About The App
 
 ### Scope
 
