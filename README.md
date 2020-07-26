@@ -35,7 +35,7 @@ Once familiar with the route, if the user is one with privileges, then he/she wi
 ![home](https://user-images.githubusercontent.com/49337267/88475695-fa7bba00-cf4f-11ea-8924-864a63622157.png)
 
 
-* **Brief information** _(Brief information on the selected tab is given to the user. Name of the room, Name of the professor the room is assigned to, Qualification and Designation)_
+* **Brief information** (Brief information on the selected tab is given to the user. Name of the room, Name of the professor the room is assigned to, Qualification and Designation)
 
 ![brief](https://user-images.githubusercontent.com/49337267/88475709-1da66980-cf50-11ea-81bd-745d2b6615b1.png)
 
