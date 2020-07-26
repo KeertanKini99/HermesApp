@@ -30,6 +30,16 @@ Once familiar with the route, if the user is one with privileges, then he/she wi
 
 ## Working of the App
 
-* *Home screen*
+* **Home screen** (_The landing page of the app_)
+
+![image](https://user-images.githubusercontent.com/49337267/88473124-09ef0900-cf38-11ea-8b77-7bc700f3a8fa.png)
+
+
+
+* **Brief information** (_Brief info on the selected tab is given to the user. Name of the room, Name of the professor the room is assigned to, Qualification and Designation._)
+
+![image](https://user-images.githubusercontent.com/49337267/88473133-1bd0ac00-cf38-11ea-8343-45b638cea0c6.png)
+
+  
 
 
