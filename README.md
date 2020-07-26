@@ -45,7 +45,7 @@ Once familiar with the route, if the user is one with privileges, then he/she wi
 ![generate](https://user-images.githubusercontent.com/49337267/88475711-2a2ac200-cf50-11ea-9d09-b5a1ba61d413.png)
 
 
-* **Navigation** _(The navigation is done photographically. Node and path are alternated to provide a more comprehensive and confusion-free access to intended locations. One reaching the destination node, a popup message appears notifying that the destination has been reached. The user can also go back to the previous location, in case they get lost during traversing)_ 
+* **Navigation** _(The navigation is done photographically. Node and path are alternated to provide a more comprehensive and confusion-free access to intended locations. On reaching the destination node, a popup message appears notifying that the destination has been reached. The user can also go back to the previous location, in case they get lost during traversing)_ 
 
 ![route](https://user-images.githubusercontent.com/49337267/88475565-c05de880-cf4e-11ea-86a8-07bdbb99c8b9.png)
 
